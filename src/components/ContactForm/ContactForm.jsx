@@ -12,6 +12,7 @@ const ContactForm = () => {
         maxWidth: `500px`,
       }}
     >
+      <input type="hidden" name="contact-form" value="contact"></input>
       <label htmlFor="email">Your Email:</label>
       <input type="email" id="email" name="email" />
       <label htmlFor="subject">Subject:</label>
