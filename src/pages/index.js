@@ -1,6 +1,6 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
+import ContactForm from "../components/ContactForm/ContactForm"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -13,6 +13,7 @@ const IndexPage = () => (
     <h2>About</h2>
     <h2>Tech Stack</h2>
     <h2>Contact</h2>
+    <ContactForm></ContactForm>
     <p>
       <Link to="/page-2/">Go to page 2</Link> <br />
       <Link to="/using-typescript/">Go to "Using TypeScript"</Link> <br />
