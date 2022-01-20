@@ -4,6 +4,7 @@ const ContactForm = () => {
   return (
     <form
       name="contact-form"
+      action="/success/"
       method="POST"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
