@@ -6,10 +6,12 @@ import {
   Date,
   Description,
 } from "./About.styled"
+import SectionTitle from "../Common/SectionTitle/Index"
 
 const About = () => {
   return (
     <AboutContainer>
+      <SectionTitle>About</SectionTitle>
       <Description>After pursuing...</Description>
       {/* TODO: map over each experience */}
       <ExperienceTitle>Cornell University</ExperienceTitle>

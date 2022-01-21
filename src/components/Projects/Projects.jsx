@@ -1,6 +1,7 @@
 import React from "react"
-import { ProjectsContainer, SectionTitle } from "./Projects.styled"
+import { ProjectsContainer } from "./Projects.styled"
 import Project from "./Project"
+import SectionTitle from "../Common/SectionTitle/Index"
 
 const Projects = () => {
   return (

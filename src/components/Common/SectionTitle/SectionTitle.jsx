@@ -1,8 +1,8 @@
 import React from "react"
-import Title from "styled-components"
+import { Title } from "./SectionTitle.styled"
 
-const SectionTitle = () => {
-  return <Title></Title>
+const SectionTitle = ({ children }) => {
+  return <Title>{children}</Title>
 }
 
 export default SectionTitle
