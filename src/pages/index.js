@@ -2,6 +2,7 @@ import * as React from "react"
 import { Link } from "gatsby"
 import ContactForm from "../components/ContactForm/ContactForm"
 import Landing from "../components/Landing/Index"
+import Projects from "../components/Projects/Index"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -10,7 +11,7 @@ const IndexPage = () => (
   <Layout>
     <Seo title="Home" />
     <Landing></Landing>
-    <h2>Projects</h2>
+    <Projects></Projects>
     <h2>About</h2>
     <h2>Tech Stack</h2>
     <h2>Contact</h2>
