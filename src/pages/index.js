@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import ContactForm from "../components/ContactForm/ContactForm"
 import Landing from "../components/Landing/Index"
 import Projects from "../components/Projects/Index"
+import About from "../components/About/Index"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -12,7 +13,7 @@ const IndexPage = () => (
     <Seo title="Home" />
     <Landing></Landing>
     <Projects></Projects>
-    <h2>About</h2>
+    <About></About>
     <h2>Tech Stack</h2>
     <h2>Contact</h2>
     <ContactForm></ContactForm>
