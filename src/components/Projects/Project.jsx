@@ -7,6 +7,7 @@ import {
   TechList,
   TechListItem,
 } from "./Project.styled"
+import Comment from "../Common/Comment/Index"
 
 const Project = ({ title, description, image }) => {
   return (
@@ -14,9 +15,11 @@ const Project = ({ title, description, image }) => {
       <ProjectTitle>{title}</ProjectTitle>
       <ProjectDescription>{description}</ProjectDescription>
       {/* <ProjectImage>{image} </ProjectImage> */}
+      <Comment>Tech Stack</Comment>
       <TechList>
         <TechListItem>temp item</TechListItem>
       </TechList>
+      <Comment>See Code</Comment>
     </ProjectContainer>
   )
 }
