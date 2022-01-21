@@ -1,7 +1,7 @@
 import React from "react"
-import { LandingContainer, Title, Description } from "./Styles"
+import { LandingContainer, Title, Description } from "./Landing.styled"
 
-const landing = () => {
+const Landing = () => {
   return (
     <LandingContainer>
       <Title>Hi, I'm Jason 👋</Title>
@@ -13,4 +13,4 @@ const landing = () => {
   )
 }
 
-export default landing
+export default Landing

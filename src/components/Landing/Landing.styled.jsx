@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-export const LandingContainer = styled.div``
+export const LandingContainer = styled.section``
 
 export const Title = styled.h1``
 
