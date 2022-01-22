@@ -4,6 +4,7 @@ import ContactForm from "../components/ContactForm/ContactForm"
 import Landing from "../components/Landing/Index"
 import Projects from "../components/Projects/Index"
 import About from "../components/About/Index"
+import Tools from "../components/Tools/Index"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -14,7 +15,7 @@ const IndexPage = () => (
     <Landing></Landing>
     <Projects></Projects>
     <About></About>
-    <h2>Tech Stack</h2>
+    <Tools></Tools>
     <h2>Contact</h2>
     <ContactForm></ContactForm>
     <p>
