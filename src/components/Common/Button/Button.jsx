@@ -1,8 +1,8 @@
-import React from "react"
-import { Button as ButtonStyled } from "./Button.styled"
+import React from "react";
+import { Button as ButtonStyled } from "./Button.styled";
 
 const Button = ({ children }) => {
-  return <ButtonStyled>{children}</ButtonStyled>
-}
+  return <ButtonStyled>{children}</ButtonStyled>;
+};
 
-export default Button
+export default Button;

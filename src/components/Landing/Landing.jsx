@@ -1,5 +1,5 @@
-import React from "react"
-import { LandingContainer, Title, Description } from "./Landing.styled"
+import React from "react";
+import { LandingContainer, Title, Description } from "./Landing.styled";
 
 const Landing = () => {
   return (
@@ -10,7 +10,7 @@ const Landing = () => {
         nerd.
       </Description>
     </LandingContainer>
-  )
-}
+  );
+};
 
-export default Landing
+export default Landing;

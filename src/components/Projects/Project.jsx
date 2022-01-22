@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 import {
   ProjectContainer,
   ProjectTitle,
@@ -6,8 +6,8 @@ import {
   ProjectDescription,
   TechList,
   TechListItem,
-} from "./Project.styled"
-import Comment from "../Common/Comment/Index"
+} from "./Project.styled";
+import Comment from "../Common/Comment/Index";
 
 const Project = ({ title, description, image }) => {
   return (
@@ -21,7 +21,7 @@ const Project = ({ title, description, image }) => {
       </TechList>
       <Comment>See Code</Comment>
     </ProjectContainer>
-  )
-}
+  );
+};
 
-export default Project
+export default Project;

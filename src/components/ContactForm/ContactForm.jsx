@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 import {
   ContactFormContainer,
   Form,
@@ -7,10 +7,10 @@ import {
   InputEmail,
   InputText,
   TextArea,
-} from "./ContactForm.Styled"
-import Comment from "../Common/Comment/Index"
-import SectionTitle from "../Common/SectionTitle/Index"
-import Button from "../Common/Button/Index"
+} from "./ContactForm.Styled";
+import Comment from "../Common/Comment/Index";
+import SectionTitle from "../Common/SectionTitle/Index";
+import Button from "../Common/Button/Index";
 
 const ContactForm = () => {
   return (
@@ -34,7 +34,7 @@ const ContactForm = () => {
         <Button type="Submit">Send</Button>
       </Form>
     </ContactFormContainer>
-  )
-}
+  );
+};
 
-export default ContactForm
+export default ContactForm;

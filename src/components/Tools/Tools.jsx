@@ -1,13 +1,13 @@
-import React from "react"
+import React from "react";
 import {
   ToolsContainer,
   ListTitle,
   TechList,
   TechListItem,
   TechColumn,
-} from "./Tools.styled"
-import Comment from "../Common/Comment/Index"
-import SectionTitle from "../Common/SectionTitle/Index"
+} from "./Tools.styled";
+import Comment from "../Common/Comment/Index";
+import SectionTitle from "../Common/SectionTitle/Index";
 
 const Tools = () => {
   return (
@@ -54,7 +54,7 @@ const Tools = () => {
         </TechList>
       </TechColumn>
     </ToolsContainer>
-  )
-}
+  );
+};
 
-export default Tools
+export default Tools;

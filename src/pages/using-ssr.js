@@ -1,8 +1,8 @@
-import * as React from "react"
-import { Link } from "gatsby"
+import * as React from "react";
+import { Link } from "gatsby";
 
-import Layout from "../components/layout"
-import Seo from "../components/seo"
+import Layout from "../components/layout";
+import Seo from "../components/seo";
 
 const UsingSSR = ({ serverData }) => {
   return (
@@ -24,25 +24,25 @@ const UsingSSR = ({ serverData }) => {
       </p>
       <Link to="/">Go back to the homepage</Link>
     </Layout>
-  )
-}
+  );
+};
 
-export default UsingSSR
+export default UsingSSR;
 
 export async function getServerData() {
   try {
-    const res = await fetch(`https://dog.ceo/api/breeds/image/random`)
+    const res = await fetch(`https://dog.ceo/api/breeds/image/random`);
     if (!res.ok) {
-      throw new Error(`Response failed`)
+      throw new Error(`Response failed`);
     }
     return {
       props: await res.json(),
-    }
+    };
   } catch (error) {
     return {
       status: 500,
       headers: {},
       props: {},
-    }
+    };
   }
 }

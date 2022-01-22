@@ -1,13 +1,13 @@
-import React from "react"
+import React from "react";
 import {
   AboutContainer,
   ExperienceTitle,
   Position,
   Date,
   Description,
-} from "./About.styled"
-import SectionTitle from "../Common/SectionTitle/Index"
-import Comment from "../Common/Comment/Index"
+} from "./About.styled";
+import SectionTitle from "../Common/SectionTitle/Index";
+import Comment from "../Common/Comment/Index";
 
 const About = () => {
   return (
@@ -24,7 +24,7 @@ const About = () => {
         bachulars in biology and the entire pre-med track
       </Description>
     </AboutContainer>
-  )
-}
+  );
+};
 
-export default About
+export default About;
