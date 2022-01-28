@@ -9,6 +9,10 @@ import Tools from "../components/Tools/Index";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
 
+const apiKey = process.env.GATSBY_API_KEY;
+// const apiKey = process.env.GATSBY_SENDGRID_API_KEY;
+console.log(apiKey);
+
 const IndexPage = () => (
   <Layout>
     <Seo title="Home" />
