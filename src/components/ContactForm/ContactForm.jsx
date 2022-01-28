@@ -38,8 +38,9 @@ const ContactForm = () => {
       }
 
       //all OK
-    } catch (e) {
-      console.error(e);
+      alert("mail sent");
+    } catch (error) {
+      console.log(error.response.body);
     }
   };
 
