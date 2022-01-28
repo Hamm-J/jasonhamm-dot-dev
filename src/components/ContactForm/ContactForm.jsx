@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   ContactFormContainer,
   Form,
@@ -13,6 +13,36 @@ import SectionTitle from "../Common/SectionTitle/Index";
 import Button from "../Common/Button/Index";
 
 const ContactForm = () => {
+  const [formState, setFormState] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const onChange = (e) => {
+    setFormState({ ...formState, [e.target.name]: e.target.value });
+  };
+
+  const submitForm = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await fetch("/.netlify/functions/sendMail", {
+        method: "POST",
+        body: JSON.stringify(formState),
+      });
+
+      if (!response.ok) {
+        //not 200 response
+        return;
+      }
+
+      //all OK
+    } catch (e) {
+      console.error(e);
+    }
+  };
+
   return (
     <ContactFormContainer>
       <SectionTitle>Contact</SectionTitle>
@@ -21,16 +51,17 @@ const ContactForm = () => {
         name="contact-form"
         action="/success/"
         method="POST"
-        data-netlify="true"
-        data-netlify-honeypot="bot-field"
+        onSubmit={submitForm}
+        // data-netlify="true"
+        // data-netlify-honeypot="bot-field"
       >
-        <InputHidden name="form-name" value="contact-form"></InputHidden>
+        {/* <InputHidden name="form-name" value="contact-form"></InputHidden> */}
         <Label htmlFor="name">Name</Label>
-        <InputText id="name" name="name"></InputText>
+        <InputText id="name" name="name" onChange={onChange}></InputText>
         <Label htmlFor="email">Email</Label>
-        <InputEmail id="email" name="email"></InputEmail>
+        <InputEmail id="email" name="email" onChange={onChange}></InputEmail>
         <Label htmlFor="message">Message</Label>
-        <TextArea id="message" name="message"></TextArea>
+        <TextArea id="message" name="message" onChange={onChange}></TextArea>
         <Button type="Submit">Send</Button>
       </Form>
     </ContactFormContainer>
