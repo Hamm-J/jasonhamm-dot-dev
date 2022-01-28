@@ -1,2 +1,5 @@
 [dev]
-functions = "functions"
+functions = "src/functions"
+
+[context.dev]
+environment = { GATSBY_API_KEY = "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" }
