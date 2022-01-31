@@ -9,17 +9,39 @@ import {
 } from "./Project.styled";
 import Comment from "../Common/Comment/Index";
 
-const Project = ({ title, description, image }) => {
+const Project = ({
+  title,
+  description,
+  image,
+  techList,
+  codeLink,
+  codeLabel,
+  deploymentLink,
+  deploymentLabel,
+}) => {
   return (
     <ProjectContainer>
       <ProjectTitle>{title}</ProjectTitle>
       <ProjectDescription>{description}</ProjectDescription>
-      {/* <ProjectImage>{image} </ProjectImage> */}
+      <ProjectImage src={image} width="200px" height="200px"></ProjectImage>
       <Comment>Tech Stack</Comment>
       <TechList>
-        <TechListItem>temp item</TechListItem>
+        {techList.map((item, itemIdx) => (
+          <TechListItem key={itemIdx}>{item}</TechListItem>
+        ))}
       </TechList>
-      <Comment>See Code</Comment>
+      <Comment>
+        See Code:{" "}
+        <a href={codeLink} target="_blank">
+          {codeLabel}
+        </a>
+      </Comment>
+      <Comment>
+        See Site:{" "}
+        <a href={deploymentLink} target="_blank">
+          {deploymentLabel}
+        </a>
+      </Comment>
     </ProjectContainer>
   );
 };
