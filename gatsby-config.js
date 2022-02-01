@@ -8,6 +8,7 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
+    `gatsby-plugin-netlify-cms`,
     // `gatsby-plugin-scroll-reveal`,
     {
       resolve: `gatsby-plugin-scroll-reveal`,
