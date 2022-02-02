@@ -1,7 +1,8 @@
 backend:
+  # name: test-repo
   name: git-gateway
   branch: main
-media_folder: ../../src/images
+media_folder: src/images
 public_folder: /assets
 collections:
   - name: blog
