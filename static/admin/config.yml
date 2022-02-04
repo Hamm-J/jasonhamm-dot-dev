@@ -1,7 +1,7 @@
 backend:
-  # name: test-repo
-  name: git-gateway
-  branch: main
+  name: test-repo
+  # name: git-gateway
+  # branch: main
 media_folder: src/images
 public_folder: /images
 collections:
@@ -19,10 +19,8 @@ collections:
     folder: src/cms/landing
     create: true
     fields:
-      - { name: path, label: Path }
-      - { name: date, label: Date, widget: datetime }
       - { name: title, label: Title }
-      - { name: body, label: Body, widget: markdown }
+      - { name: description, label: Description, widget: markdown }
   - name: projects
     label: Projects
     folder: src/cms/projects

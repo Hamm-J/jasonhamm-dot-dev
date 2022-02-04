@@ -1,5 +1,5 @@
 ---
-slug: "/landing/temp2"
-date: "2019-05-04"
-title: "temp landing"
+title: "Hi, I'm Jason 👋"
 ---
+
+I'm a frontend software developer, cooking enthusiest, and philosophy nerd.

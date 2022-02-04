@@ -4,28 +4,29 @@ import { graphql, useStaticQuery } from "gatsby";
 
 const Landing = () => {
   const data = useStaticQuery(graphql`
-    query MyQuery {
-      allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/landing/" } }) {
+    query LandingQuery {
+      allMarkdownRemark(
+        filter: {
+          fileAbsolutePath: { regex: "src/cms/landing/" }
+          frontmatter: {}
+        }
+      ) {
         edges {
           node {
             frontmatter {
               title
-              slug
-              date
             }
+            rawMarkdownBody
           }
         }
       }
     }
   `);
-  console.log(data);
+  const { node } = data.allMarkdownRemark.edges[0];
   return (
     <LandingContainer>
-      <Title>Hi, I'm Jason 👋</Title>
-      <Description>
-        I'm a frontend software developer, cooking enthusiest, and philosophy
-        nerd.
-      </Description>
+      <Title>{node.frontmatter.title}</Title>
+      <Description>{node.rawMarkdownBody}</Description>
     </LandingContainer>
   );
 };
