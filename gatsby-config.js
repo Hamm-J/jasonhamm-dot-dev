@@ -38,7 +38,7 @@ module.exports = {
         path: `${__dirname}/src/cms`,
       },
     },
-
+    `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
