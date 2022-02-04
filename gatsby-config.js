@@ -32,6 +32,11 @@ module.exports = {
         name: `images`,
         path: `${__dirname}/src/images`,
       },
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `cms`,
+        path: `${__dirname}/src/cms`,
+      },
     },
 
     `gatsby-transformer-sharp`,
