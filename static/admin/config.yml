@@ -5,9 +5,54 @@ backend:
 media_folder: src/images
 public_folder: /images
 collections:
-  - name: blog
-    label: Blog
+  - name: cms
+    label: CMS
     folder: src/cms
+    create: true
+    fields:
+      - { name: path, label: Path }
+      - { name: date, label: Date, widget: datetime }
+      - { name: title, label: Title }
+      - { name: body, label: Body, widget: markdown }
+  - name: landing
+    label: Landing
+    folder: src/cms/landing
+    create: true
+    fields:
+      - { name: path, label: Path }
+      - { name: date, label: Date, widget: datetime }
+      - { name: title, label: Title }
+      - { name: body, label: Body, widget: markdown }
+  - name: projects
+    label: Projects
+    folder: src/cms/projects
+    create: true
+    fields:
+      - { name: path, label: Path }
+      - { name: date, label: Date, widget: datetime }
+      - { name: title, label: Title }
+      - { name: body, label: Body, widget: markdown }
+  - name: about
+    label: About
+    folder: src/cms/about
+    create: true
+    fields:
+      - { name: path, label: Path }
+      - { name: date, label: Date, widget: datetime }
+      - { name: title, label: Title }
+      - { name: body, label: Body, widget: markdown }
+  - name: tools
+    label: Tools
+    folder: src/cms/tools
+    create: true
+    fields:
+      - { name: path, label: Path }
+      - { name: date, label: Date, widget: datetime }
+      - { name: title, label: Title }
+      - { name: body, label: Body, widget: markdown }
+  - name: contact
+    label: Contact
+    folder: src/cms/contact
     create: true
     fields:
       - { name: path, label: Path }
