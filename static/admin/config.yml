@@ -35,10 +35,10 @@ collections:
     folder: src/cms/about
     create: true
     fields:
-      - { name: path, label: Path }
-      - { name: date, label: Date, widget: datetime }
       - { name: title, label: Title }
-      - { name: body, label: Body, widget: markdown }
+      - { name: start-year, label: Start Year, widget: number }
+      - { name: end-year, label: End Year }
+      - { name: description, label: Description, widget: markdown }
   - name: tools
     label: Tools
     folder: src/cms/tools
