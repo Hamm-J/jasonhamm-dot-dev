@@ -44,10 +44,13 @@ collections:
     folder: src/cms/tools
     create: true
     fields:
-      - { name: path, label: Path }
-      - { name: date, label: Date, widget: datetime }
       - { name: title, label: Title }
-      - { name: body, label: Body, widget: markdown }
+      - {
+          name: tool-list,
+          label: Tool List,
+          widget: list,
+          default: ["tool_1", "tool_2"],
+        }
   - name: contact
     label: Contact
     folder: src/cms/contact
