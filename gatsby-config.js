@@ -9,6 +9,13 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     `gatsby-plugin-netlify-cms`,
+    {
+      resolve: `gatsby-plugin-netlify-cms-paths`,
+      options: {
+        // Path to your Netlify CMS config file
+        cmsConfig: `/static/admin/config.yml`,
+      },
+    },
     // `gatsby-plugin-scroll-reveal`,
     {
       resolve: `gatsby-plugin-scroll-reveal`,
