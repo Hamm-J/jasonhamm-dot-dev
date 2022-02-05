@@ -20,14 +20,14 @@ collections:
     create: true
     fields:
       - { name: title, label: Title }
-      - { name: description, label: Description, widget: markdown }
+      - { name: body, label: Description, widget: markdown }
   - name: projects
     label: Projects
     folder: src/cms/projects
     create: true
     fields:
       - { name: title, label: Title }
-      - { name: description, label: Description, widget: markdown }
+      - { name: body, label: Description, widget: markdown }
       - {
           name: image,
           label: image,
@@ -52,7 +52,7 @@ collections:
       - { name: title, label: Title }
       - { name: start-year, label: Start Year, widget: number }
       - { name: end-year, label: End Year }
-      - { name: description, label: Description, widget: markdown }
+      - { name: body, label: Description, widget: markdown }
   - name: tools
     label: Tools
     folder: src/cms/tools
