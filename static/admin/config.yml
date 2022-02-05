@@ -19,37 +19,52 @@ collections:
     folder: src/cms/landing
     create: true
     fields:
-      - { name: path, label: Path }
-      - { name: date, label: Date, widget: datetime }
       - { name: title, label: Title }
-      - { name: body, label: Body, widget: markdown }
+      - { name: description, label: Description, widget: markdown }
   - name: projects
     label: Projects
     folder: src/cms/projects
     create: true
     fields:
-      - { name: path, label: Path }
-      - { name: date, label: Date, widget: datetime }
       - { name: title, label: Title }
-      - { name: body, label: Body, widget: markdown }
+      - { name: description, label: Description, widget: markdown }
+      - {
+          name: image,
+          label: image,
+          widget: image,
+          default: "/images/test.png",
+        }
+      - {
+          name: tech-list,
+          label: Tech List,
+          widget: list,
+          default: ["tech_1", "tech_2"],
+        }
+      - { name: code-link, label: Code Link }
+      - { name: code-label, label: Code Label }
+      - { name: deployment-link, label: Deployment Link }
+      - { name: deployment-label, label: Deployment Label }
   - name: about
     label: About
     folder: src/cms/about
     create: true
     fields:
-      - { name: path, label: Path }
-      - { name: date, label: Date, widget: datetime }
       - { name: title, label: Title }
-      - { name: body, label: Body, widget: markdown }
+      - { name: start-year, label: Start Year, widget: number }
+      - { name: end-year, label: End Year }
+      - { name: description, label: Description, widget: markdown }
   - name: tools
     label: Tools
     folder: src/cms/tools
     create: true
     fields:
-      - { name: path, label: Path }
-      - { name: date, label: Date, widget: datetime }
       - { name: title, label: Title }
-      - { name: body, label: Body, widget: markdown }
+      - {
+          name: tool-list,
+          label: Tool List,
+          widget: list,
+          default: ["tool_1", "tool_2"],
+        }
   - name: contact
     label: Contact
     folder: src/cms/contact

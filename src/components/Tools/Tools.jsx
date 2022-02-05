@@ -8,8 +8,28 @@ import {
 } from "./Tools.styled";
 import Comment from "../Common/Comment/Index";
 import SectionTitle from "../Common/SectionTitle/Index";
+import { useStaticQuery, graphql } from "gatsby";
 
 const Tools = () => {
+  const data = useStaticQuery(graphql`
+    query ToolsQuery {
+      allMarkdownRemark(
+        filter: { fileAbsolutePath: { regex: "src/cms/tools/" } }
+      ) {
+        edges {
+          node {
+            rawMarkdownBody
+            frontmatter {
+              title
+              tool_list
+            }
+          }
+        }
+      }
+    }
+  `);
+
+  const { edges } = data.allMarkdownRemark;
   return (
     <ToolsContainer>
       <SectionTitle>Tools</SectionTitle>
@@ -18,41 +38,16 @@ const Tools = () => {
         development. Check back in a few months, or even weeks, and you'll
         likely see a new tech below. Learning is life.
       </Comment>
-      <TechColumn>
-        <ListTitle>Frontend Technologies</ListTitle>
-        <TechList>
-          <TechListItem>JavaScript</TechListItem>
-          <TechListItem>ReactJS</TechListItem>
-          <TechListItem>CSS</TechListItem>
-          <TechListItem>SCSS</TechListItem>
-          <TechListItem>HTML</TechListItem>
-          <TechListItem>Styled Components</TechListItem>
-          <TechListItem>StorybookJS</TechListItem>
-          <TechListItem>GatsbyJS</TechListItem>
-        </TechList>
-      </TechColumn>
-      <TechColumn>
-        <ListTitle>Backend Technologies</ListTitle>
-        <TechList>
-          <TechListItem>NodeJS</TechListItem>
-          <TechListItem>Python</TechListItem>
-          <TechListItem>Flask</TechListItem>
-          <TechListItem>Firebase</TechListItem>
-          <TechListItem>Netlify</TechListItem>
-        </TechList>
-      </TechColumn>
-      <TechColumn>
-        <ListTitle>Other</ListTitle>
-        <TechList>
-          <TechListItem>Git</TechListItem>
-          <TechListItem>Unix/Linux</TechListItem>
-          <TechListItem>TypeScript</TechListItem>
-          <TechListItem>Vim/NeoVim</TechListItem>
-          <TechListItem>tmux</TechListItem>
-          <TechListItem>R</TechListItem>
-          <TechListItem>RStudio</TechListItem>
-        </TechList>
-      </TechColumn>
+      {edges.map((edge, edgeIdx) => (
+        <TechColumn key={edgeIdx}>
+          <ListTitle>{edge.node.frontmatter.title}</ListTitle>
+          <TechList>
+            {edge.node.frontmatter.tool_list.map((tool, toolIdx) => (
+              <TechListItem key={toolIdx}>{tool}</TechListItem>
+            ))}
+          </TechList>
+        </TechColumn>
+      ))}
     </ToolsContainer>
   );
 };
