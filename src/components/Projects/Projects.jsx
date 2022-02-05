@@ -2,7 +2,7 @@ import React from "react";
 import { ProjectsContainer } from "./Projects.styled";
 import Project from "./Project";
 import SectionTitle from "../Common/SectionTitle/Index";
-import image from "../../images/gatsby-astronaut.png";
+import image from "../../images/test.png";
 import { useStaticQuery, graphql } from "gatsby";
 
 const Projects = () => {
@@ -11,40 +11,43 @@ const Projects = () => {
       allMarkdownRemark(
         filter: { fileAbsolutePath: { regex: "src/cms/projects/" } }
       ) {
-        nodes {
-          frontmatter {
-            title
-            image
-            deployment_label
-            deployment_link
-            code_label
-            code_link
-            tech_list
+        edges {
+          node {
+            frontmatter {
+              image
+              title
+              tech_list
+              deployment_link
+              deployment_label
+              code_link
+              code_label
+            }
+            rawMarkdownBody
           }
-          rawMarkdownBody
         }
       }
     }
   `);
 
   console.log(data);
-  const { nodes } = data.allMarkdownRemark;
-  console.log(nodes);
+  const { edges } = data.allMarkdownRemark;
+  console.log(edges);
+  console.log(image);
   return (
     <ProjectsContainer>
       <SectionTitle>Projects</SectionTitle>
-      {nodes.map((node, nodeIdx) => (
+      {edges.map((edge, edgeIdx) => (
         <Project
-          key={nodeIdx}
-          title={node.frontmatter.title}
-          image={`../..${node.frontmatter.image}`}
+          key={edgeIdx}
+          title={edge.node.frontmatter.title}
+          // image={edge.node.frontmatter.image}
+          image={image}
           // techList={}
-          codeLink={node.frontmatter.code_link}
-          codeLabel={node.frontmatter.code_label}
-          deploymentLink={node.frontmatter.deployment_link}
-          deploymentLabel={node.frontmatter.deployment_label}
-          description={node.rawMarkdownBody}
-          // image={image}
+          codeLink={edge.node.frontmatter.code_link}
+          codeLabel={edge.node.frontmatter.code_label}
+          deploymentLink={edge.node.frontmatter.deployment_link}
+          deploymentLabel={edge.node.frontmatter.deployment_label}
+          description={edge.node.rawMarkdownBody}
         />
       ))}
 
