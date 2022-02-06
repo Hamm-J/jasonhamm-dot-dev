@@ -25,11 +25,11 @@ const Project = ({
       <ProjectDescription>{description}</ProjectDescription>
       <ProjectImage src={image} width="200px" height="200px"></ProjectImage>
       <Comment>Tech Stack</Comment>
-      {/* <TechList>
+      <TechList>
         {techList.map((item, itemIdx) => (
           <TechListItem key={itemIdx}>{item}</TechListItem>
         ))}
-      </TechList> */}
+      </TechList>
       <Comment>
         See Code:{" "}
         <a href={codeLink} target="_blank">

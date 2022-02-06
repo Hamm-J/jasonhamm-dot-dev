@@ -33,16 +33,22 @@ const Projects = () => {
   const { edges } = data.allMarkdownRemark;
   console.log(edges);
   console.log(image);
+
+  edges.map((edge, idx) => {
+    console.log(idx);
+    console.log(edge.node.frontmatter.image);
+  });
   return (
     <ProjectsContainer>
       <SectionTitle>Projects</SectionTitle>
+      <img src="./images/test.png" />
       {edges.map((edge, edgeIdx) => (
         <Project
           key={edgeIdx}
           title={edge.node.frontmatter.title}
-          // image={edge.node.frontmatter.image}
-          image={image}
-          // techList={}
+          image={edge.node.frontmatter.image}
+          // image={image}
+          techList={edge.node.frontmatter.tech_list}
           codeLink={edge.node.frontmatter.code_link}
           codeLabel={edge.node.frontmatter.code_label}
           deploymentLink={edge.node.frontmatter.deployment_link}
