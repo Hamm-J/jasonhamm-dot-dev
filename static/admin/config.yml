@@ -2,8 +2,8 @@ backend:
   # name: test-repo
   name: git-gateway
   branch: main
-media_folder: src/images
-public_folder: /images
+media_folder: "static/assets"
+public_folder: "/assets"
 collections:
   - name: cms
     label: CMS

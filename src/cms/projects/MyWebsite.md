@@ -1,15 +1,16 @@
 ---
-title: project test title
+title: My Website
 image: /assets/test.png
 tech-list:
   - React
-  - GatsbyJS
-  - Netlify_CMS
-  - styled_components
+  - Gatsby JS
+  - Netlify CMS
+  - Styled Components
+  - Sal
 code-link: https://www.github.com/
 code-label: github
 deployment-link: https://www.google.com/
-deployment-label: test site
+deployment-label: google
 ---
 
-body test
+my website project description
