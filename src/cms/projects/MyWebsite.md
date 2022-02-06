@@ -1,6 +1,6 @@
 ---
 title: My Website
-image: /images/test.png
+image: /assets/test.png
 tech-list:
   - React
   - Gatsby JS

@@ -1,6 +1,6 @@
 ---
 title: project test title
-image: /images/test.png
+image: /assets/test.png
 tech-list:
   - React
   - GatsbyJS

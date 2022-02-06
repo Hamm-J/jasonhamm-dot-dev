@@ -2,7 +2,6 @@ import React from "react";
 import { ProjectsContainer } from "./Projects.styled";
 import Project from "./Project";
 import SectionTitle from "../Common/SectionTitle/Index";
-import image from "../../images/test.png";
 import { useStaticQuery, graphql } from "gatsby";
 
 const Projects = () => {
@@ -29,25 +28,16 @@ const Projects = () => {
     }
   `);
 
-  console.log(data);
   const { edges } = data.allMarkdownRemark;
-  console.log(edges);
-  console.log(image);
 
-  edges.map((edge, idx) => {
-    console.log(idx);
-    console.log(edge.node.frontmatter.image);
-  });
   return (
     <ProjectsContainer>
       <SectionTitle>Projects</SectionTitle>
-      <img src="./images/test.png" />
       {edges.map((edge, edgeIdx) => (
         <Project
           key={edgeIdx}
           title={edge.node.frontmatter.title}
           image={edge.node.frontmatter.image}
-          // image={image}
           techList={edge.node.frontmatter.tech_list}
           codeLink={edge.node.frontmatter.code_link}
           codeLabel={edge.node.frontmatter.code_label}
@@ -56,17 +46,6 @@ const Projects = () => {
           description={edge.node.rawMarkdownBody}
         />
       ))}
-
-      {/* <Project
-        title="reddit analytics"
-        image={image}
-        techList={["React", "Firebase", "styled-components"]}
-        codeLink={"https://www.github.com"}
-        codeLabel={"GitHub"}
-        deploymentLink={"https://www.firebase.com"}
-        deploymentLabel={"Firebase"}
-        description="find the best time to post on reddit"
-      /> */}
     </ProjectsContainer>
   );
 };

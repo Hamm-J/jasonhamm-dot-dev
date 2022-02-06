@@ -9,13 +9,13 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     `gatsby-plugin-netlify-cms`,
-    {
-      resolve: `gatsby-plugin-netlify-cms-paths`,
-      options: {
-        // Path to your Netlify CMS config file
-        cmsConfig: `/static/admin/config.yml`,
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-netlify-cms-paths`,
+    //   options: {
+    //     // Path to your Netlify CMS config file
+    //     cmsConfig: `/static/admin/config.yml`,
+    //   },
+    // },
     // `gatsby-plugin-scroll-reveal`,
     {
       resolve: `gatsby-plugin-scroll-reveal`,
@@ -45,31 +45,31 @@ module.exports = {
         path: `${__dirname}/src/cms`,
       },
     },
-    // "gatsby-transformer-remark",
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [
-          {
-            resolve: `gatsby-plugin-netlify-cms-paths`,
-            options: {
-              // Path to your Netlify CMS config file
-              cmsConfig: `/static/admin/config.yml`,
-            },
-          },
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              // It's important to specify the maxWidth (in pixels) of
-              // the content container as this plugin uses this as the
-              // base for generating different widths of each image.
-              maxWidth: 500,
-              backgroundColor: "transparent", // required to display blurred image first
-            },
-          },
-        ],
-      },
-    },
+    "gatsby-transformer-remark",
+    // {
+    //   resolve: `gatsby-transformer-remark`,
+    //   options: {
+    //     plugins: [
+    //       {
+    //         resolve: `gatsby-plugin-netlify-cms-paths`,
+    //         options: {
+    //           // Path to your Netlify CMS config file
+    //           cmsConfig: `/static/admin/config.yml`,
+    //         },
+    //       },
+    //       {
+    //         resolve: `gatsby-remark-images`,
+    //         options: {
+    //           // It's important to specify the maxWidth (in pixels) of
+    //           // the content container as this plugin uses this as the
+    //           // base for generating different widths of each image.
+    //           maxWidth: 500,
+    //           backgroundColor: "transparent", // required to display blurred image first
+    //         },
+    //       },
+    //     ],
+    //   },
+    // },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
