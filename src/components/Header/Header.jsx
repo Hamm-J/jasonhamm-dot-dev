@@ -8,18 +8,20 @@ const Header = ({ siteTitle }) => {
         <NavLink to="/#landing" title="contact">
           Jason Hamm
         </NavLink>
-        <NavLink to="/#projects" title="contact">
-          Projects
-        </NavLink>
-        <NavLink to="/#about" title="contact">
-          About
-        </NavLink>
-        <NavLink to="/#tools" title="contact">
-          Tools
-        </NavLink>
-        <NavLink to="/#contact" title="contact">
-          Contact
-        </NavLink>
+        <div>
+          <NavLink to="/#projects" title="contact">
+            Projects
+          </NavLink>
+          <NavLink to="/#about" title="contact">
+            About
+          </NavLink>
+          <NavLink to="/#tools" title="contact">
+            Tools
+          </NavLink>
+          <NavLink to="/#contact" title="contact">
+            Contact
+          </NavLink>
+        </div>
       </Nav>
     </HeaderContainer>
   );

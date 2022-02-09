@@ -8,7 +8,12 @@ export const HeaderContainer = styled.header`
   background-color: white;
 `;
 
-export const Nav = styled.nav``;
+export const Nav = styled.nav`
+  display: flex;
+  justify-content: space-between;
+  padding-left: 5vw;
+  padding-right: 5vw;
+`;
 
 export const NavLink = styled(AnchorLink)`
   text-decoration: none;
