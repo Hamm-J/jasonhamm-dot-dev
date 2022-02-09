@@ -31,7 +31,7 @@ const Projects = () => {
   const { edges } = data.allMarkdownRemark;
 
   return (
-    <ProjectsContainer>
+    <ProjectsContainer id="projects">
       <SectionTitle>Projects</SectionTitle>
       {edges.map((edge, edgeIdx) => (
         <Project

@@ -1,16 +1,25 @@
 import React from "react";
-import { HeaderContainer, Nav } from "./Header.styled";
-import { Link } from "gatsby";
+import { HeaderContainer, Nav, NavLink } from "./Header.styled";
 
 const Header = ({ siteTitle }) => {
   return (
     <HeaderContainer>
       <Nav>
-        <Link to="#">{siteTitel}</Link>
-        <Link to="#">Projects</Link>
-        <Link to="#">About</Link>
-        <Link to="#">Tools</Link>
-        <Link to="#">Contact</Link>
+        <NavLink to="/#landing" title="contact">
+          Jason Hamm
+        </NavLink>
+        <NavLink to="/#projects" title="contact">
+          Projects
+        </NavLink>
+        <NavLink to="/#about" title="contact">
+          About
+        </NavLink>
+        <NavLink to="/#tools" title="contact">
+          Tools
+        </NavLink>
+        <NavLink to="/#contact" title="contact">
+          Contact
+        </NavLink>
       </Nav>
     </HeaderContainer>
   );

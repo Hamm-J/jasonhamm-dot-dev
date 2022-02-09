@@ -35,7 +35,7 @@ const About = () => {
   `);
   const { edges } = data.allMarkdownRemark;
   return (
-    <AboutContainer>
+    <AboutContainer id="about">
       <SectionTitle>About</SectionTitle>
       <Description>[GENERAL DESC]After pursuing...</Description>
       <Comment>Learn more about me below... [call to action]</Comment>

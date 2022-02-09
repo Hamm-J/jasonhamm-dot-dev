@@ -45,7 +45,7 @@ const ContactForm = () => {
   };
 
   return (
-    <ContactFormContainer>
+    <ContactFormContainer id="contact">
       <SectionTitle>Contact</SectionTitle>
       <Comment>Socials</Comment>
       <Form

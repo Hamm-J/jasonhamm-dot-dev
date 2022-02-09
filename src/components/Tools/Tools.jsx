@@ -31,7 +31,7 @@ const Tools = () => {
 
   const { edges } = data.allMarkdownRemark;
   return (
-    <ToolsContainer>
+    <ToolsContainer id="tools">
       <SectionTitle>Tools</SectionTitle>
       <Comment>
         I am always in the process of learning new tools for software

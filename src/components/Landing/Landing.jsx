@@ -29,7 +29,7 @@ const Landing = () => {
   `);
   const { node } = data.allMarkdownRemark.edges[0];
   return (
-    <LandingContainer>
+    <LandingContainer id="landing">
       <ContentWrapper>
         <Title>{node.frontmatter.title}</Title>
         <Description>{node.rawMarkdownBody}</Description>
