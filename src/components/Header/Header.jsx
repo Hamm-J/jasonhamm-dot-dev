@@ -4,7 +4,7 @@ import { HeaderContainer, Nav, NavLink } from "./Header.styled";
 const Header = ({ siteTitle }) => {
   return (
     <HeaderContainer>
-      <Nav>
+      <Nav data-sal="flip-up" data-sal-delay="1000" data-sal-easing="ease">
         <NavLink to="/#landing" title="contact">
           Jason Hamm
         </NavLink>

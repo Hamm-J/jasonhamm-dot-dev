@@ -31,8 +31,20 @@ const Landing = () => {
   return (
     <LandingContainer id="landing">
       <ContentWrapper>
-        <Title>{node.frontmatter.title}</Title>
-        <Description>{node.rawMarkdownBody}</Description>
+        <Title
+          data-sal="slide-right"
+          data-sal-delay="300"
+          data-sal-easing="ease"
+        >
+          {node.frontmatter.title}
+        </Title>
+        <Description
+          data-sal="slide-left"
+          data-sal-delay="500"
+          data-sal-easing="ease"
+        >
+          {node.rawMarkdownBody}
+        </Description>
       </ContentWrapper>
     </LandingContainer>
   );
