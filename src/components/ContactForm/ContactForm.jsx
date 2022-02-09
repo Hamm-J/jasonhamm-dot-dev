@@ -7,7 +7,7 @@ import {
   InputEmail,
   InputText,
   TextArea,
-} from "./ContactForm.Styled";
+} from "./ContactForm.styled";
 import Comment from "../Common/Comment/Index";
 import SectionTitle from "../Common/SectionTitle/Index";
 import Button from "../Common/Button/Index";
