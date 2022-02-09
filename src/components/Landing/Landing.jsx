@@ -1,5 +1,10 @@
 import React from "react";
-import { LandingContainer, Title, Description } from "./Landing.styled";
+import {
+  LandingContainer,
+  ContentWrapper,
+  Title,
+  Description,
+} from "./Landing.styled";
 import { graphql, useStaticQuery } from "gatsby";
 
 const Landing = () => {
@@ -25,8 +30,10 @@ const Landing = () => {
   const { node } = data.allMarkdownRemark.edges[0];
   return (
     <LandingContainer>
-      <Title>{node.frontmatter.title}</Title>
-      <Description>{node.rawMarkdownBody}</Description>
+      <ContentWrapper>
+        <Title>{node.frontmatter.title}</Title>
+        <Description>{node.rawMarkdownBody}</Description>
+      </ContentWrapper>
     </LandingContainer>
   );
 };
