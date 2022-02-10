@@ -38,6 +38,17 @@ export const ImageWrapper = styled.div`
   }
 `;
 
-export const TechList = styled.ul``;
+export const TechList = styled.ul`
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+`;
 
-export const TechListItem = styled.li``;
+export const TechListItem = styled.li`
+  margin: 5px 5px 5px 0;
+  padding: 5px 10px 5px 10px;
+  background-color: black;
+  color: white;
+`;
