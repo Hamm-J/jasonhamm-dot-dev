@@ -41,9 +41,7 @@ collections:
           default: ["tech_1", "tech_2"],
         }
       - { name: code-link, label: Code Link }
-      - { name: code-label, label: Code Label }
       - { name: deployment-link, label: Deployment Link }
-      - { name: deployment-label, label: Deployment Label }
   - name: about
     label: About
     folder: src/cms/about

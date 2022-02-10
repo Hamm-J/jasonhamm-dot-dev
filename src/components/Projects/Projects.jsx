@@ -17,9 +17,7 @@ const Projects = () => {
               title
               tech_list
               deployment_link
-              deployment_label
               code_link
-              code_label
             }
             rawMarkdownBody
           }
@@ -40,9 +38,7 @@ const Projects = () => {
           image={edge.node.frontmatter.image}
           techList={edge.node.frontmatter.tech_list}
           codeLink={edge.node.frontmatter.code_link}
-          codeLabel={edge.node.frontmatter.code_label}
           deploymentLink={edge.node.frontmatter.deployment_link}
-          deploymentLabel={edge.node.frontmatter.deployment_label}
           description={edge.node.rawMarkdownBody}
         />
       ))}

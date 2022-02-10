@@ -13,15 +13,14 @@ import Comment from "../Common/Comment/Index";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
+
 const Project = ({
   title,
   description,
   image,
   techList,
   codeLink,
-  codeLabel,
   deploymentLink,
-  deploymentLabel,
 }) => {
   return (
     <ProjectContainer
@@ -43,17 +42,15 @@ const Project = ({
         ))}
       </TechList>
       <Comment>
-        See Code: <FontAwesomeIcon icon="fa-brands fa-github" />
-        <a href={codeLink} target="_blank">
-          {codeLabel}
-          <FontAwesomeIcon icon={faGithub} />
+        <a href={deploymentLink} target="_blank">
+          Website
+          <FontAwesomeIcon icon={faLink} />
         </a>
       </Comment>
       <Comment>
-        See Site:{" "}
-        <a href={deploymentLink} target="_blank">
-          {deploymentLabel}
-          <FontAwesomeIcon icon={faLink} />
+        <a href={codeLink} target="_blank">
+          Code
+          <FontAwesomeIcon icon={faGithub} />
         </a>
       </Comment>
     </ProjectContainer>
