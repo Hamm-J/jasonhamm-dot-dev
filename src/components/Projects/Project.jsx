@@ -8,6 +8,7 @@ import {
   InfoWrapper,
   TechList,
   TechListItem,
+  LinksWrapper,
 } from "./Project.styled";
 import Comment from "../Common/Comment/Index";
 import GeneralAnchor from "../Common/GeneralAnchor/Index";
@@ -42,16 +43,18 @@ const Project = ({
           <TechListItem key={itemIdx}>{item}</TechListItem>
         ))}
       </TechList>
-      <Comment>
-        <GeneralAnchor href={deploymentLink} target="_blank">
-          Website <FontAwesomeIcon icon={faLink} />
-        </GeneralAnchor>
-      </Comment>
-      <Comment>
-        <GeneralAnchor href={codeLink} target="_blank">
-          Code <FontAwesomeIcon icon={faGithub} />
-        </GeneralAnchor>
-      </Comment>
+      <LinksWrapper>
+        <Comment>
+          <GeneralAnchor href={deploymentLink} target="_blank">
+            Website <FontAwesomeIcon icon={faLink} />
+          </GeneralAnchor>
+        </Comment>
+        <Comment>
+          <GeneralAnchor href={codeLink} target="_blank">
+            Code <FontAwesomeIcon icon={faGithub} />
+          </GeneralAnchor>
+        </Comment>
+      </LinksWrapper>
     </ProjectContainer>
   );
 };

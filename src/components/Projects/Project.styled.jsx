@@ -52,3 +52,8 @@ export const TechListItem = styled.li`
   background-color: black;
   color: white;
 `;
+
+export const LinksWrapper = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+`;
