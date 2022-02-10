@@ -10,6 +10,7 @@ import {
   TechListItem,
 } from "./Project.styled";
 import Comment from "../Common/Comment/Index";
+import GeneralAnchor from "../Common/GeneralAnchor/Index";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
@@ -42,16 +43,14 @@ const Project = ({
         ))}
       </TechList>
       <Comment>
-        <a href={deploymentLink} target="_blank">
-          Website
-          <FontAwesomeIcon icon={faLink} />
-        </a>
+        <GeneralAnchor href={deploymentLink} target="_blank">
+          Website <FontAwesomeIcon icon={faLink} />
+        </GeneralAnchor>
       </Comment>
       <Comment>
-        <a href={codeLink} target="_blank">
-          Code
-          <FontAwesomeIcon icon={faGithub} />
-        </a>
+        <GeneralAnchor href={codeLink} target="_blank">
+          Code <FontAwesomeIcon icon={faGithub} />
+        </GeneralAnchor>
       </Comment>
     </ProjectContainer>
   );
