@@ -3,7 +3,9 @@ import {
   ProjectContainer,
   ProjectTitle,
   ProjectImage,
+  ImageWrapper,
   ProjectDescription,
+  InfoWrapper,
   TechList,
   TechListItem,
 } from "./Project.styled";
@@ -20,10 +22,18 @@ const Project = ({
   deploymentLabel,
 }) => {
   return (
-    <ProjectContainer>
-      <ProjectTitle>{title}</ProjectTitle>
-      <ProjectDescription>{description}</ProjectDescription>
-      <ProjectImage src={image} width="200px" height="200px"></ProjectImage>
+    <ProjectContainer
+    // data-sal="slide-up"
+    // data-sal-delay="300"
+    // data-sal-easing="ease"
+    >
+      <ImageWrapper>
+        <ProjectImage src={image}></ProjectImage>
+        <InfoWrapper>
+          <ProjectTitle>{title}</ProjectTitle>
+          <ProjectDescription>{description}</ProjectDescription>
+        </InfoWrapper>
+      </ImageWrapper>
       <Comment>Tech Stack</Comment>
       <TechList>
         {techList.map((item, itemIdx) => (
