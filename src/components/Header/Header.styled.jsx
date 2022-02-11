@@ -8,6 +8,11 @@ export const HeaderContainer = styled.header`
   z-index: 10;
   background-color: white;
   height: 80px;
+  max-width: 1150px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  padding-right: 15px;
 `;
 
 export const SideWrapper = styled.div`
@@ -15,7 +20,6 @@ export const SideWrapper = styled.div`
   display: flex;
   justify-content: ${(props) => props.side};
   align-items: center;
-  padding-right: 15px;
 `;
 
 export const NavLink = styled(AnchorLink)`
