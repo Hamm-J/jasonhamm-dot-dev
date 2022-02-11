@@ -3,11 +3,18 @@ import {
   ProjectContainer,
   ProjectTitle,
   ProjectImage,
+  ImageWrapper,
   ProjectDescription,
+  InfoWrapper,
   TechList,
   TechListItem,
+  LinksWrapper,
 } from "./Project.styled";
 import Comment from "../Common/Comment/Index";
+import GeneralAnchor from "../Common/GeneralAnchor/Index";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faLink } from "@fortawesome/free-solid-svg-icons";
 
 const Project = ({
   title,
@@ -15,33 +22,39 @@ const Project = ({
   image,
   techList,
   codeLink,
-  codeLabel,
   deploymentLink,
-  deploymentLabel,
 }) => {
   return (
-    <ProjectContainer>
-      <ProjectTitle>{title}</ProjectTitle>
-      <ProjectDescription>{description}</ProjectDescription>
-      <ProjectImage src={image} width="200px" height="200px"></ProjectImage>
+    <ProjectContainer
+    // data-sal="slide-up"
+    // data-sal-delay="300"
+    // data-sal-easing="ease"
+    >
+      <ImageWrapper>
+        <ProjectImage src={image}></ProjectImage>
+        <InfoWrapper>
+          <ProjectTitle>{title}</ProjectTitle>
+          <ProjectDescription>{description}</ProjectDescription>
+        </InfoWrapper>
+      </ImageWrapper>
       <Comment>Tech Stack</Comment>
       <TechList>
         {techList.map((item, itemIdx) => (
           <TechListItem key={itemIdx}>{item}</TechListItem>
         ))}
       </TechList>
-      <Comment>
-        See Code:{" "}
-        <a href={codeLink} target="_blank">
-          {codeLabel}
-        </a>
-      </Comment>
-      <Comment>
-        See Site:{" "}
-        <a href={deploymentLink} target="_blank">
-          {deploymentLabel}
-        </a>
-      </Comment>
+      <LinksWrapper>
+        <Comment>
+          <GeneralAnchor href={deploymentLink} target="_blank">
+            Website <FontAwesomeIcon icon={faLink} />
+          </GeneralAnchor>
+        </Comment>
+        <Comment>
+          <GeneralAnchor href={codeLink} target="_blank">
+            Code <FontAwesomeIcon icon={faGithub} />
+          </GeneralAnchor>
+        </Comment>
+      </LinksWrapper>
     </ProjectContainer>
   );
 };

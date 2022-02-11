@@ -5,6 +5,7 @@ import {
   TechList,
   TechListItem,
   TechColumn,
+  ListGrid,
 } from "./Tools.styled";
 import Comment from "../Common/Comment/Index";
 import SectionTitle from "../Common/SectionTitle/Index";
@@ -31,23 +32,25 @@ const Tools = () => {
 
   const { edges } = data.allMarkdownRemark;
   return (
-    <ToolsContainer>
+    <ToolsContainer id="tools">
       <SectionTitle>Tools</SectionTitle>
       <Comment>
         I am always in the process of learning new tools for software
         development. Check back in a few months, or even weeks, and you'll
         likely see a new tech below. Learning is life.
       </Comment>
-      {edges.map((edge, edgeIdx) => (
-        <TechColumn key={edgeIdx}>
-          <ListTitle>{edge.node.frontmatter.title}</ListTitle>
-          <TechList>
-            {edge.node.frontmatter.tool_list.map((tool, toolIdx) => (
-              <TechListItem key={toolIdx}>{tool}</TechListItem>
-            ))}
-          </TechList>
-        </TechColumn>
-      ))}
+      <ListGrid>
+        {edges.map((edge, edgeIdx) => (
+          <TechColumn key={edgeIdx}>
+            <ListTitle>{edge.node.frontmatter.title}</ListTitle>
+            <TechList>
+              {edge.node.frontmatter.tool_list.map((tool, toolIdx) => (
+                <TechListItem key={toolIdx}>{tool}</TechListItem>
+              ))}
+            </TechList>
+          </TechColumn>
+        ))}
+      </ListGrid>
     </ToolsContainer>
   );
 };
