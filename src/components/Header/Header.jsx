@@ -32,7 +32,9 @@ const Header = ({ siteTitle }) => {
           </NavLink>
         </TitleWrapper>
         <LinksWrapper>
-          <NavLink to="/#projects" title="contact" className="linky">
+          <NavbarDesktop></NavbarDesktop>
+          <NavbarMobile></NavbarMobile>
+          {/* <NavLink to="/#projects" title="contact">
             <LinkText showLinks={showLinks}>Projects</LinkText>
           </NavLink>
           <NavLink to="/#about" title="contact">
@@ -43,8 +45,8 @@ const Header = ({ siteTitle }) => {
           </NavLink>
           <NavLink to="/#contact" title="contact">
             <LinkText showLinks={showLinks}>Contact</LinkText>
-          </NavLink>
-          <Hamburger onClick={toggleLinks}>open</Hamburger>
+          </NavLink> */}
+          {/* <Hamburger onClick={toggleLinks}>open</Hamburger> */}
         </LinksWrapper>
       </Nav>
     </HeaderContainer>
