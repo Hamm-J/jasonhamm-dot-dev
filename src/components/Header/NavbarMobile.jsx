@@ -7,6 +7,8 @@ import {
   LinkWrapper,
   CloseButton,
 } from "./NavbarMobile.styled";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 const NavbarMobile = () => {
   const [open, setOpen] = useState(false);
@@ -42,7 +44,9 @@ const NavbarMobile = () => {
           <CloseButton onClick={toggleOpen}>Close</CloseButton>
         </LinkWrapper>
       </Overlay>
-      <Hamburger onClick={toggleOpen}>Open</Hamburger>
+      <Hamburger onClick={toggleOpen}>
+        <FontAwesomeIcon icon={faBars} />
+      </Hamburger>
     </NavContainer>
   );
 };

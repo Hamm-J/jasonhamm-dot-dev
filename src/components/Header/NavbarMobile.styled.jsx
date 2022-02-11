@@ -4,6 +4,15 @@ import { AnchorLink } from "gatsby-plugin-anchor-links";
 export const NavContainer = styled.nav``;
 
 export const Hamburger = styled.button`
+  font-size: 36px;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    color: #952121;
+  }
+
   @media (min-width: 961px) {
     display: none;
   }
