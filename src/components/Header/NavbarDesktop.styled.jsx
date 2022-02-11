@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 
 export const NavContainer = styled.nav`
-  @media (max-width: 850px) {
+  @media (max-width: 960px) {
     display: none;
   }
 `;

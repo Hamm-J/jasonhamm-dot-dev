@@ -4,7 +4,7 @@ import { AnchorLink } from "gatsby-plugin-anchor-links";
 export const NavContainer = styled.nav``;
 
 export const Hamburger = styled.button`
-  @media (min-width: 851px) {
+  @media (min-width: 961px) {
     display: none;
   }
 `;
