@@ -32,4 +32,8 @@ export const NavLink = styled(AnchorLink)`
   &:hover {
     color: #952121;
   }
+
+  @media (max-width: 490px) {
+    font-size: 24px;
+  }
 `;
