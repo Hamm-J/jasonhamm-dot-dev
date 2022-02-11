@@ -9,6 +9,8 @@ import {
   TitleWrapper,
   Hamburger,
 } from "./Header.styled";
+import NavbarDesktop from "./NavbarDesktop";
+import NavbarMobile from "./NavbarMobile";
 
 const Header = ({ siteTitle }) => {
   const [showLinks, setShowLinks] = useState(false);
