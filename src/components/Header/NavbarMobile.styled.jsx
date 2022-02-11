@@ -17,6 +17,25 @@ export const NavLink = styled(AnchorLink)`
 `;
 
 export const Overlay = styled.div`
-  z-index: ${(props) => (props.open ? 1 : -1)};
-  opacity: ${(props) => (props.open ? 1 : 0)};
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 60%;
+  z-index: 1;
+  background-color: black;
+
+  // show Overlay and LinkWrapper when open is true
+  display: ${(props) => (props.open ? "inline" : "none")};
 `;
+
+export const LinkWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 25%;
+`;
+
+export const CloseButton = styled.button``;
