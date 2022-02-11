@@ -15,7 +15,6 @@ export const Nav = styled.nav`
 
 export const TitleWrapper = styled.div`
   flex: 50vw;
-  background-color: red;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -24,7 +23,6 @@ export const TitleWrapper = styled.div`
 
 export const LinksWrapper = styled.div`
   flex: 50vw;
-  background-color: green;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -35,6 +33,11 @@ export const NavLink = styled(AnchorLink)`
   text-decoration: none;
   max-height: 80px;
   margin-left: 15px;
+  color: black;
+
+  &:hover {
+    color: #952121;
+  }
 `;
 
 export const TitleText = styled.span`

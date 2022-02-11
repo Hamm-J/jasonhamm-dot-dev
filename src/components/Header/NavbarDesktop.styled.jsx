@@ -12,4 +12,9 @@ export const NavLink = styled(AnchorLink)`
   font-size: 25px;
   max-height: 80px;
   margin-left: 15px;
+  color: black;
+
+  &:hover {
+    color: #952121;
+  }
 `;

@@ -14,6 +14,13 @@ export const NavLink = styled(AnchorLink)`
   font-size: 25px;
   max-height: 80px;
   margin-left: 15px;
+  color: white;
+  /* opacity: 1 !important; */
+
+  &:hover {
+    color: #952121;
+    /* opacity: 1; */
+  }
 `;
 
 export const Overlay = styled.div`
@@ -22,7 +29,7 @@ export const Overlay = styled.div`
   top: 0;
   width: ${(props) => (props.open ? "100vw" : "0")};
   height: ${(props) => (props.open ? "100vh" : "0")};
-  opacity: ${(props) => (props.open ? "0.80" : "0")};
+  opacity: ${(props) => (props.open ? "0.85" : "0")};
   transition: opacity 0.25s ease-in 0 ease-out;
 
   background-color: black;

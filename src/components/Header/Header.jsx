@@ -3,11 +3,9 @@ import {
   HeaderContainer,
   Nav,
   NavLink,
-  LinkText,
   TitleText,
   LinksWrapper,
   TitleWrapper,
-  Hamburger,
 } from "./Header.styled";
 import NavbarDesktop from "./NavbarDesktop";
 import NavbarMobile from "./NavbarMobile";
