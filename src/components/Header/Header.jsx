@@ -1,27 +1,49 @@
-import React from "react";
-import { HeaderContainer, Nav, NavLink } from "./Header.styled";
+import React, { useState } from "react";
+import {
+  HeaderContainer,
+  Nav,
+  NavLink,
+  LinkText,
+  TitleText,
+  LinksWrapper,
+  TitleWrapper,
+  Hamburger,
+} from "./Header.styled";
 
 const Header = ({ siteTitle }) => {
+  const [showLinks, setShowLinks] = useState(false);
+
+  const toggleLinks = (state) => {
+    if (showLinks) {
+      setShowLinks(false);
+    } else {
+      setShowLinks(true);
+    }
+  };
+
   return (
     <HeaderContainer>
-      <Nav data-sal="flip-up" data-sal-delay="1000" data-sal-easing="ease">
-        <NavLink to="/#landing" title="contact">
-          Jason Hamm
-        </NavLink>
-        <div>
-          <NavLink to="/#projects" title="contact">
-            Projects
+      <Nav>
+        <TitleWrapper>
+          <NavLink to="/#landing" title="contact">
+            <TitleText>{siteTitle}</TitleText>
+          </NavLink>
+        </TitleWrapper>
+        <LinksWrapper>
+          <NavLink to="/#projects" title="contact" className="linky">
+            <LinkText showLinks={showLinks}>Projects</LinkText>
           </NavLink>
           <NavLink to="/#about" title="contact">
-            About
+            <LinkText showLinks={showLinks}>About</LinkText>
           </NavLink>
           <NavLink to="/#tools" title="contact">
-            Tools
+            <LinkText showLinks={showLinks}>Tools</LinkText>
           </NavLink>
           <NavLink to="/#contact" title="contact">
-            Contact
+            <LinkText showLinks={showLinks}>Contact</LinkText>
           </NavLink>
-        </div>
+          <Hamburger onClick={toggleLinks}>open</Hamburger>
+        </LinksWrapper>
       </Nav>
     </HeaderContainer>
   );
