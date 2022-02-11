@@ -5,7 +5,6 @@ import {
   NavLink,
   Overlay,
   LinkWrapper,
-  CloseButton,
 } from "./NavbarMobile.styled";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
@@ -20,28 +19,19 @@ const NavbarMobile = () => {
   return (
     <NavContainer>
       <Overlay open={open}>
-        <LinkWrapper open={open}>
-          <NavLink
-            to="/#projects"
-            title="contact"
-            onAnchorLinkClick={toggleOpen}
-          >
+        <LinkWrapper open={open} onClick={toggleOpen}>
+          <NavLink to="/#projects" title="contact">
             Projects
           </NavLink>
-          <NavLink to="/#about" title="contact" onAnchorLinkClick={toggleOpen}>
+          <NavLink to="/#about" title="contact">
             About
           </NavLink>
-          <NavLink to="/#tools" title="contact" onAnchorLinkClick={toggleOpen}>
+          <NavLink to="/#tools" title="contact">
             Tools
           </NavLink>
-          <NavLink
-            to="/#contact"
-            title="contact"
-            onAnchorLinkClick={toggleOpen}
-          >
+          <NavLink to="/#contact" title="contact">
             Contact
           </NavLink>
-          <CloseButton onClick={toggleOpen}>Close</CloseButton>
         </LinkWrapper>
       </Overlay>
       <Hamburger onClick={toggleOpen}>

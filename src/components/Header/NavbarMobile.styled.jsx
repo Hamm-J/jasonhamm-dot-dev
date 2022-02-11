@@ -3,27 +3,13 @@ import { AnchorLink } from "gatsby-plugin-anchor-links";
 
 export const NavContainer = styled.nav``;
 
-export const Hamburger = styled.button`
-  font-size: 36px;
-  background: none;
-  border: none;
-  cursor: pointer;
-
-  &:hover {
-    color: #952121;
-  }
-
-  @media (min-width: 961px) {
-    display: none;
-  }
-`;
-
 export const NavLink = styled(AnchorLink)`
   text-decoration: none;
-  font-size: 25px;
+  font-size: 36px;
   max-height: 80px;
   margin-left: 15px;
   color: white;
+  margin: 15px;
 
   &:hover {
     color: #952121;
@@ -53,4 +39,17 @@ export const LinkWrapper = styled.div`
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 `;
 
-export const CloseButton = styled.button``;
+export const Hamburger = styled.button`
+  font-size: 36px;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    color: #952121;
+  }
+
+  @media (min-width: 961px) {
+    display: none;
+  }
+`;
