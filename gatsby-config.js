@@ -10,6 +10,12 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-netlify-cms`,
     {
+      resolve: `gatsby-plugin-styled-components`,
+      options: {
+        // Add any options here
+      },
+    },
+    {
       resolve: "gatsby-plugin-anchor-links",
       options: {
         offset: -100,
