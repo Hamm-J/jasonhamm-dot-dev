@@ -18,7 +18,7 @@ const NavbarMobile = () => {
   return (
     <NavContainer>
       <Overlay open={open}>
-        <LinkWrapper>
+        <LinkWrapper open={open}>
           <NavLink
             to="/#projects"
             title="contact"

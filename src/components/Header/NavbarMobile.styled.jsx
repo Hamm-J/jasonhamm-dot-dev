@@ -18,16 +18,14 @@ export const NavLink = styled(AnchorLink)`
 
 export const Overlay = styled.div`
   position: fixed;
-  top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 60%;
-  z-index: 1;
-  background-color: black;
+  top: 0;
+  width: ${(props) => (props.open ? "100vw" : "0")};
+  height: ${(props) => (props.open ? "100vh" : "0")};
+  opacity: ${(props) => (props.open ? "0.80" : "0")};
+  transition: opacity 0.25s ease-in 0 ease-out;
 
-  // show Overlay and LinkWrapper when open is true
-  display: ${(props) => (props.open ? "inline" : "none")};
+  background-color: black;
 `;
 
 export const LinkWrapper = styled.div`
@@ -35,7 +33,10 @@ export const LinkWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 25%;
+  height: 100vh;
+  transform: ${(props) => (props.open ? "translateY(0)" : "translateY(-15px)")};
+  opacity: ${(props) => (props.open ? "1" : "0")};
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 `;
 
 export const CloseButton = styled.button``;
