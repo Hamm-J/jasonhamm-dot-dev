@@ -15,11 +15,9 @@ export const NavLink = styled(AnchorLink)`
   max-height: 80px;
   margin-left: 15px;
   color: white;
-  /* opacity: 1 !important; */
 
   &:hover {
     color: #952121;
-    /* opacity: 1; */
   }
 `;
 
