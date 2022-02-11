@@ -3,15 +3,15 @@ import { AnchorLink } from "gatsby-plugin-anchor-links";
 
 export const HeaderContainer = styled.header`
   position: fixed;
-  display: flex;
-  width: 100%;
+  left: 0;
+  right: 0;
+  max-width: 1150px;
+  margin: 0 auto;
   z-index: 10;
   background-color: white;
   height: 80px;
-  max-width: 1150px;
-  margin: 0 auto;
-  left: 0;
-  right: 0;
+  width: 100%;
+  display: flex;
   padding-right: 15px;
 `;
 

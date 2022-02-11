@@ -5,13 +5,17 @@ import NavbarMobile from "./NavbarMobile";
 
 const Header = ({ siteTitle }) => {
   return (
-    <HeaderContainer>
-      <SideWrapper side="left">
+    <HeaderContainer
+      data-sal="slide-down"
+      data-sal-delay="1000"
+      data-sal-easing="ease"
+    >
+      <SideWrapper side="flex-start">
         <NavLink to="/#landing" title="contact">
           {siteTitle}
         </NavLink>
       </SideWrapper>
-      <SideWrapper side="right">
+      <SideWrapper side="flex-end">
         <NavbarDesktop></NavbarDesktop>
         <NavbarMobile></NavbarMobile>
       </SideWrapper>
