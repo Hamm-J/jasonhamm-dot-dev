@@ -30,10 +30,6 @@ const Tools = () => {
   `);
 
   const { edges } = data.allMarkdownRemark;
-  console.log(edges);
-  console.log(edges[0].node.frontmatter.title);
-  console.log(edges[1].node.frontmatter.title);
-  console.log(edges[2].node.frontmatter.title);
 
   const frontend = edges[0].node.frontmatter;
 
