@@ -3,7 +3,7 @@ import {
   ContactFormContainer,
   ContactGrid,
   Form,
-  Info,
+  InfoWrapper,
   Label,
   Questions,
   InputEmail,
@@ -54,7 +54,7 @@ const ContactForm = () => {
     <ContactFormContainer id="contact">
       <SectionTitle>Contact</SectionTitle>
       <ContactGrid>
-        <Info htmlFor="name">
+        <InfoWrapper htmlFor="name">
           <Questions
             data-sal="slide-right"
             data-sal-delay="300"
@@ -83,7 +83,7 @@ const ContactForm = () => {
               </GeneralAnchor>
             </Comment>
           </div>
-        </Info>
+        </InfoWrapper>
         <Form
           name="contact-form"
           action="/success/"
@@ -102,6 +102,7 @@ const ContactForm = () => {
             id="name"
             name="name"
             onChange={onChange}
+            required
             data-sal="slide-up"
             data-sal-delay="400"
             data-sal-easing="ease"
@@ -118,6 +119,7 @@ const ContactForm = () => {
             id="email"
             name="email"
             onChange={onChange}
+            required
             data-sal="slide-up"
             data-sal-delay="600"
             data-sal-easing="ease"
@@ -134,6 +136,7 @@ const ContactForm = () => {
             id="message"
             name="message"
             onChange={onChange}
+            required
             data-sal="slide-up"
             data-sal-delay="800"
             data-sal-easing="ease"
