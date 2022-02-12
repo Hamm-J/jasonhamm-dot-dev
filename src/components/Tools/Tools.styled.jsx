@@ -4,7 +4,11 @@ export const ToolsContainer = styled.section``;
 
 export const ListTitle = styled.h3``;
 
-export const TechList = styled.ul``;
+export const TechList = styled.ul`
+  list-style: none;
+  margin: 0;
+  padding: 0;
+`;
 
 export const TechListItem = styled.li``;
 
