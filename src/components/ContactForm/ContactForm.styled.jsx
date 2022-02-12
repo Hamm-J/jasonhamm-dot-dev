@@ -17,12 +17,47 @@ export const Info = styled.div``;
 
 export const Label = styled.label``;
 
-export const InputHidden = styled.input.attrs({ type: "hidden" })``;
+export const InputEmail = styled.input.attrs({ type: "email" })`
+  border: 1px solid black;
 
-export const InputEmail = styled.input.attrs({ type: "email" })``;
+  &:focus {
+    outline: 1px solid #952121;
+  }
+`;
 
-export const InputText = styled.input.attrs({ type: "text" })``;
+export const InputText = styled.input.attrs({ type: "text" })`
+  border: 1px solid black;
+
+  &:focus {
+    outline: 1px solid #952121;
+  }
+`;
 
 export const TextArea = styled.textarea`
   height: 150px;
+  border: 1px solid black;
+  resize: vertical;
+
+  &:focus {
+    outline: 1px solid #952121;
+  }
+`;
+
+export const SubmitButton = styled.button`
+  background-color: black;
+  border: 1px solid black;
+  color: white;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #952121;
+  }
+
+  &:active {
+    opacity: 0.85;
+  }
+
+  &:focus {
+    outline: 1px solid #952121;
+  }
 `;

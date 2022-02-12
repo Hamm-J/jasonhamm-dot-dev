@@ -8,10 +8,10 @@ import {
   InputEmail,
   InputText,
   TextArea,
+  SubmitButton,
 } from "./ContactForm.styled";
 import Comment from "../Common/Comment/Index";
 import SectionTitle from "../Common/SectionTitle/Index";
-import Button from "../Common/Button/Index";
 import GeneralAnchor from "../Common/GeneralAnchor/GeneralAnchor";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
@@ -81,7 +81,7 @@ const ContactForm = () => {
           <InputEmail id="email" name="email" onChange={onChange}></InputEmail>
           <Label htmlFor="message">Message</Label>
           <TextArea id="message" name="message" onChange={onChange}></TextArea>
-          <Button type="Submit">Send</Button>
+          <SubmitButton type="Submit">Send</SubmitButton>
         </Form>
       </ContactGrid>
     </ContactFormContainer>
