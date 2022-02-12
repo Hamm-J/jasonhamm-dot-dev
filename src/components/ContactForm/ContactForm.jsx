@@ -5,6 +5,7 @@ import {
   Form,
   Info,
   Label,
+  Questions,
   InputEmail,
   InputText,
   TextArea,
@@ -53,21 +54,35 @@ const ContactForm = () => {
     <ContactFormContainer id="contact">
       <SectionTitle>Contact</SectionTitle>
       <ContactGrid>
-        <Info>
-          <Comment>Got any questions?</Comment>
-          <Comment>Message me and I'll get right back to you.</Comment>
-          <Comment>
-            Also, feel free to reach out to me or find me on{" "}
-            <GeneralAnchor href="https://github.com/Hamm-J" target="_blank">
-              Github
-              <FontAwesomeIcon icon={faGithub} />
-            </GeneralAnchor>{" "}
-            or{" "}
-            <GeneralAnchor href="https://linkedin.com/" target="_blank">
-              LinkedIn
-              <FontAwesomeIcon icon={faLinkedin} />
-            </GeneralAnchor>
-          </Comment>
+        <Info htmlFor="name">
+          <Questions
+            data-sal="slide-right"
+            data-sal-delay="300"
+            data-sal-easing="ease"
+          >
+            Got any questions? 📬
+          </Questions>
+          <div
+            data-sal="slide-right"
+            data-sal-delay="500"
+            data-sal-easing="ease"
+          >
+            <Comment htmlFor="name">
+              Message me and I'll get right back to you!
+            </Comment>
+            <Comment htmlFor="name">
+              Check me out on{" "}
+              <GeneralAnchor href="https://github.com/Hamm-J" target="_blank">
+                Github
+                <FontAwesomeIcon icon={faGithub} />
+              </GeneralAnchor>{" "}
+              or{" "}
+              <GeneralAnchor href="https://linkedin.com/" target="_blank">
+                Linked
+                <FontAwesomeIcon icon={faLinkedin} />.
+              </GeneralAnchor>
+            </Comment>
+          </div>
         </Info>
         <Form
           name="contact-form"
@@ -75,13 +90,62 @@ const ContactForm = () => {
           method="POST"
           onSubmit={submitForm}
         >
-          <Label htmlFor="name">Name</Label>
-          <InputText id="name" name="name" onChange={onChange}></InputText>
-          <Label htmlFor="email">Email</Label>
-          <InputEmail id="email" name="email" onChange={onChange}></InputEmail>
-          <Label htmlFor="message">Message</Label>
-          <TextArea id="message" name="message" onChange={onChange}></TextArea>
-          <SubmitButton type="Submit">Send</SubmitButton>
+          <Label
+            htmlFor="name"
+            data-sal="slide-up"
+            data-sal-delay="300"
+            data-sal-easing="ease"
+          >
+            Name
+          </Label>
+          <InputText
+            id="name"
+            name="name"
+            onChange={onChange}
+            data-sal="slide-up"
+            data-sal-delay="400"
+            data-sal-easing="ease"
+          ></InputText>
+          <Label
+            htmlFor="email"
+            data-sal="slide-up"
+            data-sal-delay="500"
+            data-sal-easing="ease"
+          >
+            Email
+          </Label>
+          <InputEmail
+            id="email"
+            name="email"
+            onChange={onChange}
+            data-sal="slide-up"
+            data-sal-delay="600"
+            data-sal-easing="ease"
+          ></InputEmail>
+          <Label
+            htmlFor="message"
+            data-sal="slide-up"
+            data-sal-delay="700"
+            data-sal-easing="ease"
+          >
+            Message
+          </Label>
+          <TextArea
+            id="message"
+            name="message"
+            onChange={onChange}
+            data-sal="slide-up"
+            data-sal-delay="800"
+            data-sal-easing="ease"
+          ></TextArea>
+          <SubmitButton
+            type="Submit"
+            data-sal="flip-up"
+            data-sal-delay="1000"
+            data-sal-easing="ease"
+          >
+            Send
+          </SubmitButton>
         </Form>
       </ContactGrid>
     </ContactFormContainer>

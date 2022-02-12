@@ -11,11 +11,20 @@ export const Form = styled.form`
   display: flex;
   flex-direction: column;
   max-width: 500px;
+  min-width: 400px;
 `;
 
-export const Info = styled.div``;
+export const Info = styled.div`
+  display: flex;
+  max-width: 400px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+`;
 
 export const Label = styled.label``;
+
+export const Questions = styled.h3``;
 
 export const InputEmail = styled.input.attrs({ type: "email" })`
   border: 1px solid black;
