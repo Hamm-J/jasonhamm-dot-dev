@@ -51,24 +51,54 @@ const Tools = () => {
       </Comment>
       <ListGrid>
         <TechColumn>
-          <ListTitle>{frontend.title}</ListTitle>
-          <TechList>
+          <ListTitle
+            data-sal="slide-up"
+            data-sal-delay="300"
+            data-sal-easing="ease"
+          >
+            {frontend.title}
+          </ListTitle>
+          <TechList
+            data-sal="slide-up"
+            data-sal-delay="400"
+            data-sal-easing="ease"
+          >
             {frontend.tool_list.map((item, itemIdx) => (
               <TechListItem key={itemIdx}>{item}</TechListItem>
             ))}
           </TechList>
         </TechColumn>
         <TechColumn>
-          <ListTitle>{backend.title}</ListTitle>
-          <TechList>
+          <ListTitle
+            data-sal="slide-up"
+            data-sal-delay="500"
+            data-sal-easing="ease"
+          >
+            {backend.title}
+          </ListTitle>
+          <TechList
+            data-sal="slide-up"
+            data-sal-delay="600"
+            data-sal-easing="ease"
+          >
             {backend.tool_list.map((item, itemIdx) => (
               <TechListItem key={itemIdx}>{item}</TechListItem>
             ))}
           </TechList>
         </TechColumn>
         <TechColumn>
-          <ListTitle>{other.title}</ListTitle>
-          <TechList>
+          <ListTitle
+            data-sal="slide-up"
+            data-sal-delay="700"
+            data-sal-easing="ease"
+          >
+            {other.title}
+          </ListTitle>
+          <TechList
+            data-sal="slide-up"
+            data-sal-delay="800"
+            data-sal-easing="ease"
+          >
             {other.tool_list.map((item, itemIdx) => (
               <TechListItem key={itemIdx}>{item}</TechListItem>
             ))}
