@@ -3,7 +3,6 @@ import {
   ContactFormContainer,
   Form,
   Label,
-  InputHidden,
   InputEmail,
   InputText,
   TextArea,
@@ -53,10 +52,7 @@ const ContactForm = () => {
         action="/success/"
         method="POST"
         onSubmit={submitForm}
-        // data-netlify="true"
-        // data-netlify-honeypot="bot-field"
       >
-        {/* <InputHidden name="form-name" value="contact-form"></InputHidden> */}
         <Label htmlFor="name">Name</Label>
         <InputText id="name" name="name" onChange={onChange}></InputText>
         <Label htmlFor="email">Email</Label>
