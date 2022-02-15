@@ -77,7 +77,10 @@ const ContactForm = () => {
                 <FontAwesomeIcon icon={faGithub} />
               </GeneralAnchor>{" "}
               or{" "}
-              <GeneralAnchor href="https://linkedin.com/" target="_blank">
+              <GeneralAnchor
+                href="https://www.linkedin.com/in/jason-hamm-822041232/"
+                target="_blank"
+              >
                 Linked
                 <FontAwesomeIcon icon={faLinkedin} />.
               </GeneralAnchor>
