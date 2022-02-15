@@ -37,13 +37,7 @@ const About = () => {
 
   return (
     <AboutContainer id="about">
-      <SectionTitle
-        data-sal="slide-up"
-        data-sal-delay="300"
-        data-sal-easing="ease"
-      >
-        About
-      </SectionTitle>
+      <SectionTitle>About</SectionTitle>
       <Description
         data-sal="slide-up"
         data-sal-delay="300"
