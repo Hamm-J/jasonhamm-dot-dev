@@ -40,7 +40,7 @@ const About = () => {
       <SectionTitle>About</SectionTitle>
       <Description
         data-sal="slide-up"
-        data-sal-delay="300"
+        data-sal-delay="500"
         data-sal-easing="ease"
       >
         I love learning and solving problems. Nothing excites me more than
@@ -52,7 +52,7 @@ const About = () => {
       </Description>
       <Description
         data-sal="slide-up"
-        data-sal-delay="500"
+        data-sal-delay="700"
         data-sal-easing="ease"
       >
         I've always had an interest in coding but it wasn't until I started
