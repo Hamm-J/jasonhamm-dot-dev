@@ -1,6 +1,7 @@
 import React from "react";
 import {
   ToolsContainer,
+  Description,
   ListTitle,
   TechList,
   TechListItem,
@@ -33,30 +34,34 @@ const Tools = () => {
 
   const frontend = edges[0].node.frontmatter;
 
-  const backend = edges[2].node.frontmatter;
+  const backend = edges[1].node.frontmatter;
 
-  const other = edges[1].node.frontmatter;
+  const other = edges[2].node.frontmatter;
 
   return (
     <ToolsContainer id="tools">
       <SectionTitle>Tools</SectionTitle>
-      <Comment>
+      <Description
+        data-sal="slide-up"
+        data-sal-delay="300"
+        data-sal-easing="ease"
+      >
         I am always in the process of learning new tools for software
         development. Check back in a few months, or even weeks, and you'll
-        likely see a new tech below. Learning is life.
-      </Comment>
+        likely see a different tech below. Here is what I am currently using.
+      </Description>
       <ListGrid>
         <TechColumn>
           <ListTitle
             data-sal="slide-up"
-            data-sal-delay="300"
+            data-sal-delay="400"
             data-sal-easing="ease"
           >
             {frontend.title}
           </ListTitle>
           <TechList
             data-sal="slide-up"
-            data-sal-delay="400"
+            data-sal-delay="500"
             data-sal-easing="ease"
           >
             {frontend.tool_list.map((item, itemIdx) => (
@@ -67,14 +72,14 @@ const Tools = () => {
         <TechColumn>
           <ListTitle
             data-sal="slide-up"
-            data-sal-delay="500"
+            data-sal-delay="600"
             data-sal-easing="ease"
           >
             {backend.title}
           </ListTitle>
           <TechList
             data-sal="slide-up"
-            data-sal-delay="600"
+            data-sal-delay="700"
             data-sal-easing="ease"
           >
             {backend.tool_list.map((item, itemIdx) => (
@@ -85,14 +90,14 @@ const Tools = () => {
         <TechColumn>
           <ListTitle
             data-sal="slide-up"
-            data-sal-delay="700"
+            data-sal-delay="800"
             data-sal-easing="ease"
           >
             {other.title}
           </ListTitle>
           <TechList
             data-sal="slide-up"
-            data-sal-delay="800"
+            data-sal-delay="900"
             data-sal-easing="ease"
           >
             {other.tool_list.map((item, itemIdx) => (

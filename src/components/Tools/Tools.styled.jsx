@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 export const ToolsContainer = styled.section``;
 
+export const Description = styled.p``;
+
 export const ListTitle = styled.h3``;
 
 export const TechList = styled.ul`
