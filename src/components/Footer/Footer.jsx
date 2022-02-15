@@ -3,7 +3,11 @@ import { FooterContainer } from "./Footer.styled";
 
 const Footer = ({ children }) => {
   return (
-    <FooterContainer>
+    <FooterContainer
+      data-sal="slide-up"
+      data-sal-delay="300"
+      data-sal-easing="ease"
+    >
       {children}
       {/* © {new Date().getFullYear()}, Jason Hamm. All Rights Reserved. */}
     </FooterContainer>
