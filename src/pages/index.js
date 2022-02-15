@@ -13,7 +13,8 @@ const IndexPage = () => (
   <Layout>
     <Seo title="Home" />
     <Landing></Landing>
-    <Projects></Projects>
+    {/* // TODO: temporarily disable projects until projects are ready */}
+    {/* <Projects></Projects> */}
     <About></About>
     <Tools></Tools>
     <ContactForm></ContactForm>
