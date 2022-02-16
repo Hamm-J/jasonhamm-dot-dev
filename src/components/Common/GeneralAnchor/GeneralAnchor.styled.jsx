@@ -5,6 +5,6 @@ export const Anchor = styled.a`
   color: black;
 
   &:hover {
-    color: blue;
+    color: #952121;
   }
 `;
