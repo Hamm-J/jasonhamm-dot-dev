@@ -39,17 +39,15 @@ const Tools = () => {
   let backend = {};
   let other = {};
 
+  // console.log(edges);
   edges.forEach((item) => {
     console.log(item.node.frontmatter.title);
-    switch (item.node.frontmatter.title) {
-      case "Frontend":
-        frontend = item.node.frontmatter;
-      case "Backend":
-        backend = item.node.frontmatter;
-      case "Other":
-        other = item.node.frontmatter;
-      default:
-        console.log("Tool list not found.");
+    if (item.node.frontmatter.title === "Frontend") {
+      frontend = item.node.frontmatter;
+    } else if (item.node.frontmatter.title === "Backend") {
+      backend = item.node.frontmatter;
+    } else if (item.node.frontmatter.title === "Other") {
+      other = item.node.frontmatter;
     }
   });
 
