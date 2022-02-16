@@ -48,8 +48,8 @@ const About = () => {
         solving a new bug or error. Deducing what works and what doesn't.
         Researching and proposing different models and mechanisms that might
         explain what is going on. Synthesizing everything together into an
-        implementable solution. Then, <i>finally</i> the sweet satisfaction of a
-        console with nothing but green checkmarks and a list of successfully
+        implementable solution. Then, <i>finally</i>, the sweet satisfaction of
+        a console with nothing but green checkmarks and a list of successfully
         passed tests.
       </Description>
       <Description
