@@ -21,8 +21,8 @@ export const Overlay = styled.div`
   position: fixed;
   left: 0;
   top: 0;
-  width: ${(props) => (props.open ? "100vw" : "0")};
-  height: ${(props) => (props.open ? "100vh" : "0")};
+  width: ${(props) => (props.open ? "100%" : "0")};
+  height: ${(props) => (props.open ? "100%" : "0")};
   opacity: ${(props) => (props.open ? "0.85" : "0")};
   transition: opacity 0.25s ease-in 0 ease-out;
 
