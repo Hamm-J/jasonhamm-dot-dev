@@ -8,6 +8,7 @@ export const NavContainer = styled.nav`
 `;
 
 export const NavLink = styled(AnchorLink)`
+  font-family: Palatino;
   text-decoration: none;
   font-size: 25px;
   max-height: 80px;

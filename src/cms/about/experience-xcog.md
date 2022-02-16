@@ -5,4 +5,5 @@ start-year: 2019
 end-year: "Present"
 ---
 
-xcog description
+Each day is never like the last. While conducting research and manage the Experience
+& Cognition Lab,

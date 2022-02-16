@@ -10,6 +10,7 @@ import {
   InputText,
   TextArea,
   SubmitButton,
+  Confirmation,
 } from "./ContactForm.styled";
 import Comment from "../Common/Comment/Index";
 import SectionTitle from "../Common/SectionTitle/Index";
@@ -25,6 +26,9 @@ const ContactForm = () => {
     message: "",
   });
 
+  const [loading, setLoading] = useState(false);
+  const [sent, setSent] = useState(false);
+
   const onChange = (e) => {
     setFormState({ ...formState, [e.target.name]: e.target.value });
   };
@@ -33,6 +37,8 @@ const ContactForm = () => {
     e.preventDefault();
 
     try {
+      setSent(false);
+      setLoading(true);
       const response = await fetch("/.netlify/functions/sendMail", {
         method: "POST",
         body: JSON.stringify(formState),
@@ -44,7 +50,8 @@ const ContactForm = () => {
       }
 
       //all OK
-      alert("mail sent");
+      setLoading(false);
+      setSent(true);
     } catch (error) {
       console.log(error.response.body);
     }
@@ -86,6 +93,9 @@ const ContactForm = () => {
               </GeneralAnchor>
             </Comment>
           </div>
+          <Confirmation sent={sent}>
+            Thank you for your message! 📩
+          </Confirmation>
         </InfoWrapper>
         <Form
           name="contact-form"
@@ -150,7 +160,7 @@ const ContactForm = () => {
             data-sal-delay="1000"
             data-sal-easing="ease"
           >
-            Send
+            {loading ? "Sending..." : "Send"}
           </SubmitButton>
         </Form>
       </ContactGrid>
