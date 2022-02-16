@@ -26,6 +26,7 @@ const ContactForm = () => {
   });
 
   const [loading, setLoading] = useState(false);
+  const [sent, setSent] = useState(false);
 
   const onChange = (e) => {
     setFormState({ ...formState, [e.target.name]: e.target.value });
@@ -35,6 +36,7 @@ const ContactForm = () => {
     e.preventDefault();
 
     try {
+      setSent(false);
       setLoading(true);
       const response = await fetch("/.netlify/functions/sendMail", {
         method: "POST",
@@ -48,6 +50,7 @@ const ContactForm = () => {
 
       //all OK
       setLoading(false);
+      setSent(true);
       alert("mail sent");
     } catch (error) {
       console.log(error.response.body);
@@ -88,6 +91,7 @@ const ContactForm = () => {
                 Linked
                 <FontAwesomeIcon icon={faLinkedin} />.
               </GeneralAnchor>
+              {sent && <p>sent</p>}
             </Comment>
           </div>
         </InfoWrapper>
