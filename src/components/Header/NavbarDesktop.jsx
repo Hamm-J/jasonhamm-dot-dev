@@ -4,9 +4,10 @@ import { NavContainer, NavLink } from "./NavbarDesktop.styled";
 const NavbarDesktop = () => {
   return (
     <NavContainer>
-      <NavLink to="/#projects" title="contact">
+      {/* // TODO: temporarily disable projects section */}
+      {/* <NavLink to="/#projects" title="contact">
         Projects
-      </NavLink>
+      </NavLink> */}
       <NavLink to="/#about" title="contact">
         About
       </NavLink>

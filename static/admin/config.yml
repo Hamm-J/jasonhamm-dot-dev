@@ -1,5 +1,5 @@
 backend:
-  # name: test-repo
+  name: test-repo
   name: git-gateway
   branch: main
 media_folder: "static/assets"
@@ -57,12 +57,23 @@ collections:
     create: true
     fields:
       - { name: title, label: Title }
+      # - {
+      #     name: tool-list,
+      #     label: Tool List,
+      #     widget: list,
+      #     default: ["tool_1", "tool_2"],
+      #   }
       - {
-          name: tool-list,
-          label: Tool List,
+          name: tools,
+          label: Tools,
           widget: list,
-          default: ["tool_1", "tool_2"],
+          fields:
+            [
+              { name: tool-name, label: Tool Name },
+              { name: tool-image, label: Tool Image, widget: image },
+            ],
         }
+
   - name: contact
     label: Contact
     folder: src/cms/contact

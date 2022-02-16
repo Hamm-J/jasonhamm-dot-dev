@@ -37,7 +37,7 @@ const Project = ({
           <ProjectDescription>{description}</ProjectDescription>
         </InfoWrapper>
       </ImageWrapper>
-      <Comment>Tech Stack</Comment>
+      {/* <Comment>Tech Stack</Comment> */}
       <TechList>
         {techList.map((item, itemIdx) => (
           <TechListItem key={itemIdx}>{item}</TechListItem>
