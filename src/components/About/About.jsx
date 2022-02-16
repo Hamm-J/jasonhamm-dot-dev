@@ -46,32 +46,35 @@ const About = () => {
       >
         I love learning and solving problems. Nothing excites me more than
         solving a new bug or error. Deducing what works and what doesn't.
-        Proposing different models and mechanisms that might explain what is
-        going on. Synthesizing everything together into an implementable
-        solution. Then, <i>finally</i> the sweet satisfaction of a console with
-        nothing but green checkmarks and a list of successfully passed tests.
+        Researching and proposing different models and mechanisms that might
+        explain what is going on. Synthesizing everything together into an
+        implementable solution. Then, <i>finally</i> the sweet satisfaction of a
+        console with nothing but green checkmarks and a list of successfully
+        passed tests.
       </Description>
       <Description
         data-sal="slide-up"
         data-sal-delay="700"
         data-sal-easing="ease"
       >
-        I've always had an interest in coding but it wasn't until I started
-        conducting research in a cognitive science laboratory that I finally
-        sunk my teeth into it. I discovered my passion for programming while
-        creating scripts for psychology experiments in JavaScript and analyzing
-        the results in R. Now, I have combined my love for learning and solving
-        problems with my passion for programming and am ready to take on new
-        problems in software development.
+        I've always had an interest in coding but it wasn't until I worked as a
+        lab manager and research assistant in a cognitive neuroscience
+        laboratory at my alma mater of Cornell University, that I finally sunk
+        my teeth into it. I discovered my passion for programming and
+        development while developing programs for psychology experiments in
+        JavaScript, HTML, and CSS, and then analyzing the data collected with
+        those programs in R and Python. Now, I have combined my love for
+        learning and solving problems with my passion for programming and am
+        eager to take on new problems in software development.
       </Description>
-      {edges.map((edge, edgeIdx) => (
+      {/* {edges.map((edge, edgeIdx) => (
         <ExperienceItem key={edgeIdx}>
           <ExperienceTitle>{edge.node.frontmatter.title}</ExperienceTitle>
           <Position>{edge.node.frontmatter.position}</Position>
           <Date>{`${edge.node.frontmatter.start_year}-${edge.node.frontmatter.end_year}`}</Date>
           <Description>{edge.node.rawMarkdownBody}</Description>
         </ExperienceItem>
-      ))}
+      ))} */}
     </AboutContainer>
   );
 };
