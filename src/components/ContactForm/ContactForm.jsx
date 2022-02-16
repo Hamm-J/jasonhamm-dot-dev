@@ -25,6 +25,8 @@ const ContactForm = () => {
     message: "",
   });
 
+  const [loading, setLoading] = useState(false);
+
   const onChange = (e) => {
     setFormState({ ...formState, [e.target.name]: e.target.value });
   };
@@ -33,6 +35,7 @@ const ContactForm = () => {
     e.preventDefault();
 
     try {
+      setLoading(true);
       const response = await fetch("/.netlify/functions/sendMail", {
         method: "POST",
         body: JSON.stringify(formState),
@@ -44,6 +47,7 @@ const ContactForm = () => {
       }
 
       //all OK
+      setLoading(false);
       alert("mail sent");
     } catch (error) {
       console.log(error.response.body);
@@ -150,7 +154,7 @@ const ContactForm = () => {
             data-sal-delay="1000"
             data-sal-easing="ease"
           >
-            Send
+            {loading ? "Sending..." : "Send"}
           </SubmitButton>
         </Form>
       </ContactGrid>
