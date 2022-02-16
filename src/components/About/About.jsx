@@ -5,6 +5,7 @@ import {
   Position,
   Date,
   Description,
+  ExperienceItem,
 } from "./About.styled";
 import SectionTitle from "../Common/SectionTitle/Index";
 import Comment from "../Common/Comment/Index";
@@ -64,12 +65,12 @@ const About = () => {
         problems in software development.
       </Description>
       {edges.map((edge, edgeIdx) => (
-        <React.Fragment key={edgeIdx}>
+        <ExperienceItem key={edgeIdx}>
           <ExperienceTitle>{edge.node.frontmatter.title}</ExperienceTitle>
           <Position>{edge.node.frontmatter.position}</Position>
           <Date>{`${edge.node.frontmatter.start_year}-${edge.node.frontmatter.end_year}`}</Date>
           <Description>{edge.node.rawMarkdownBody}</Description>
-        </React.Fragment>
+        </ExperienceItem>
       ))}
     </AboutContainer>
   );

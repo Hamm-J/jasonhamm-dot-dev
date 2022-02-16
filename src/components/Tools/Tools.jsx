@@ -35,9 +35,9 @@ const Tools = () => {
 
   const { edges } = data.allMarkdownRemark;
 
-  const frontend = edges[1].node.frontmatter;
+  const frontend = edges[0].node.frontmatter;
 
-  const backend = edges[0].node.frontmatter;
+  const backend = edges[1].node.frontmatter;
 
   const other = edges[2].node.frontmatter;
 

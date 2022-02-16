@@ -4,7 +4,9 @@ export const ToolsContainer = styled.section``;
 
 export const Description = styled.p``;
 
-export const ListTitle = styled.h3``;
+export const ListTitle = styled.h3`
+  font-family: Palatino;
+`;
 
 export const TechList = styled.ul`
   list-style: none;

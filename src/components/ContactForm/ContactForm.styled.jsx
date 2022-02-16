@@ -24,7 +24,9 @@ export const InfoWrapper = styled.div`
 
 export const Label = styled.label``;
 
-export const Questions = styled.h3``;
+export const Questions = styled.h3`
+  font-family: Palatino;
+`;
 
 export const InputEmail = styled.input.attrs({ type: "email" })`
   border: 1px solid black;

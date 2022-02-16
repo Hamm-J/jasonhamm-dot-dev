@@ -10,6 +10,11 @@ export const LandingContainer = styled.section`
 
 export const ContentWrapper = styled.div``;
 
-export const Title = styled.h1``;
+export const Title = styled.h1`
+  font-family: Palatino;
+  color: #952121;
+`;
 
-export const Description = styled.h1``;
+export const Description = styled.h1`
+  font-family: Palatino;
+`;
