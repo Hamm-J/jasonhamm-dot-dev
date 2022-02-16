@@ -10,6 +10,7 @@ import {
   InputText,
   TextArea,
   SubmitButton,
+  Confirmation,
 } from "./ContactForm.styled";
 import Comment from "../Common/Comment/Index";
 import SectionTitle from "../Common/SectionTitle/Index";
@@ -51,7 +52,6 @@ const ContactForm = () => {
       //all OK
       setLoading(false);
       setSent(true);
-      alert("mail sent");
     } catch (error) {
       console.log(error.response.body);
     }
@@ -91,9 +91,11 @@ const ContactForm = () => {
                 Linked
                 <FontAwesomeIcon icon={faLinkedin} />.
               </GeneralAnchor>
-              {sent && <p>sent</p>}
             </Comment>
           </div>
+          <Confirmation sent={sent}>
+            Thank you for your message! 📩
+          </Confirmation>
         </InfoWrapper>
         <Form
           name="contact-form"

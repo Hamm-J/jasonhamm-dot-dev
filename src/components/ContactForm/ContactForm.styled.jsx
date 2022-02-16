@@ -72,3 +72,13 @@ export const SubmitButton = styled.button`
     outline: 1px solid #952121;
   }
 `;
+
+export const Confirmation = styled.h3`
+  margin-top: 60px;
+  font-family: Palatino;
+  color: #952121;
+  transform: ${(props) => (props.sent ? "translateY(0)" : "translateY(-15px)")};
+  opacity: ${(props) => (props.sent ? "1" : "0")};
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  cursor: ${(props) => (props.sent ? "text" : "default")};
+`;
