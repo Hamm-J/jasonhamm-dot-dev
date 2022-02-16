@@ -13,15 +13,23 @@ exports.handler = async (event, context, callback) => {
     })
     .join("<br><br>");
 
-  const msg = {
+  const msgMe = {
     to: "hamm.inquiries@gmail.com",
     from: email,
     subject: "Contact Form Submission",
     html: body,
   };
 
+  const msgClient = {
+    to: email,
+    from: "hamm.inquiries@gmail.com",
+    subject: "Thank you for reaching out!",
+    html: "Thank you for reaching out to me! I'll get back to you ASAP! <br /> <br /> Best, <br />Jason",
+  };
+
   try {
-    await sgMail.send(msg);
+    await sgMail.send(msgMe);
+    await sgMail.send(msgClient);
 
     return {
       statusCode: 200,
