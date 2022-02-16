@@ -8,7 +8,7 @@ tools:
   - tool-name: Flask
     tool-image: /assets/flask.png
   - tool-name: Firebase
-    tool-image: /assets/firebase.jpg
+    tool-image: /assets/firebase.png
   - tool-name: Netlify
     tool-image: /assets/netlify.png
 ---

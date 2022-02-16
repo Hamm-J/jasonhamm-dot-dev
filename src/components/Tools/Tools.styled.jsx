@@ -12,7 +12,15 @@ export const TechList = styled.ul`
   padding: 0;
 `;
 
-export const TechListItem = styled.li``;
+export const TechListItem = styled.li`
+  display: flex;
+  align-items: center;
+`;
+
+export const TechListItemImage = styled.img`
+  padding-left: 10px;
+  width: 40px;
+`;
 
 export const TechColumn = styled.div``;
 

@@ -5,10 +5,10 @@ import {
   ListTitle,
   TechList,
   TechListItem,
+  TechListItemImage,
   TechColumn,
   ListGrid,
 } from "./Tools.styled";
-import Comment from "../Common/Comment/Index";
 import SectionTitle from "../Common/SectionTitle/Index";
 import { useStaticQuery, graphql } from "gatsby";
 
@@ -21,8 +21,11 @@ const Tools = () => {
         edges {
           node {
             frontmatter {
+              tools {
+                tool_image
+                tool_name
+              }
               title
-              tool_list
             }
           }
         }
@@ -32,9 +35,9 @@ const Tools = () => {
 
   const { edges } = data.allMarkdownRemark;
 
-  const frontend = edges[0].node.frontmatter;
+  const frontend = edges[1].node.frontmatter;
 
-  const backend = edges[1].node.frontmatter;
+  const backend = edges[0].node.frontmatter;
 
   const other = edges[2].node.frontmatter;
 
@@ -64,8 +67,11 @@ const Tools = () => {
             data-sal-delay="500"
             data-sal-easing="ease"
           >
-            {frontend.tool_list.map((item, itemIdx) => (
-              <TechListItem key={itemIdx}>{item}</TechListItem>
+            {frontend.tools.map((item, itemIdx) => (
+              <TechListItem key={itemIdx}>
+                {item.tool_name}
+                <TechListItemImage src={item.tool_image} />
+              </TechListItem>
             ))}
           </TechList>
         </TechColumn>
@@ -82,8 +88,10 @@ const Tools = () => {
             data-sal-delay="700"
             data-sal-easing="ease"
           >
-            {backend.tool_list.map((item, itemIdx) => (
-              <TechListItem key={itemIdx}>{item}</TechListItem>
+            {backend.tools.map((item, itemIdx) => (
+              <TechListItem key={itemIdx}>
+                {item.tool_name} <TechListItemImage src={item.tool_image} />
+              </TechListItem>
             ))}
           </TechList>
         </TechColumn>
@@ -100,21 +108,13 @@ const Tools = () => {
             data-sal-delay="900"
             data-sal-easing="ease"
           >
-            {other.tool_list.map((item, itemIdx) => (
-              <TechListItem key={itemIdx}>{item}</TechListItem>
+            {other.tools.map((item, itemIdx) => (
+              <TechListItem key={itemIdx}>
+                {item.tool_name} <TechListItemImage src={item.tool_image} />
+              </TechListItem>
             ))}
           </TechList>
         </TechColumn>
-        {/* {edges.map((edge, edgeIdx) => (
-          <TechColumn key={edgeIdx}>
-            <ListTitle>{edge.node.frontmatter.title}</ListTitle>
-            <TechList>
-              {edge.node.frontmatter.tool_list.map((tool, toolIdx) => (
-                <TechListItem key={toolIdx}>{tool}</TechListItem>
-              ))}
-            </TechList>
-          </TechColumn>
-        ))} */}
       </ListGrid>
     </ToolsContainer>
   );
