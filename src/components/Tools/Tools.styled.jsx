@@ -3,12 +3,13 @@ import styled from "styled-components";
 export const ToolsContainer = styled.section``;
 
 export const Description = styled.p`
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
   font-family: Trebuchet MS;
 `;
 
 export const ListTitle = styled.h3`
   font-family: Palatino;
+  padding-top: 30px;
 `;
 
 export const TechList = styled.ul`
