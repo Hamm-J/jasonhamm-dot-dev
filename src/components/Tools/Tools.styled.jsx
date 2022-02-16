@@ -2,7 +2,10 @@ import styled from "styled-components";
 
 export const ToolsContainer = styled.section``;
 
-export const Description = styled.p``;
+export const Description = styled.p`
+  margin-bottom: 50px;
+  font-family: Trebuchet MS;
+`;
 
 export const ListTitle = styled.h3`
   font-family: Palatino;
@@ -16,6 +19,7 @@ export const TechList = styled.ul`
 
 export const TechListItem = styled.li`
   display: flex;
+  font-family: Trebuchet MS;
   align-items: center;
 `;
 

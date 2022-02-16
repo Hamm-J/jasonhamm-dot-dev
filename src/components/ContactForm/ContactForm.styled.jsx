@@ -22,7 +22,9 @@ export const InfoWrapper = styled.div`
   align-items: flex-start;
 `;
 
-export const Label = styled.label``;
+export const Label = styled.label`
+  font-family: Trebuchet MS;
+`;
 
 export const Questions = styled.h3`
   font-family: Palatino;
@@ -30,6 +32,7 @@ export const Questions = styled.h3`
 
 export const InputEmail = styled.input.attrs({ type: "email" })`
   border: 1px solid black;
+  font-family: Trebuchet MS;
 
   &:focus {
     outline: 1px solid #952121;
@@ -38,6 +41,7 @@ export const InputEmail = styled.input.attrs({ type: "email" })`
 
 export const InputText = styled.input.attrs({ type: "text" })`
   border: 1px solid black;
+  font-family: Trebuchet MS;
 
   &:focus {
     outline: 1px solid #952121;
@@ -48,6 +52,7 @@ export const TextArea = styled.textarea`
   height: 150px;
   border: 1px solid black;
   resize: vertical;
+  font-family: Trebuchet MS;
 
   &:focus {
     outline: 1px solid #952121;
@@ -58,6 +63,7 @@ export const SubmitButton = styled.button`
   background-color: black;
   border: 1px solid black;
   color: white;
+  font-family: Trebuchet MS;
   cursor: pointer;
 
   &:hover {

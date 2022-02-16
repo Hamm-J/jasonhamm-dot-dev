@@ -59,9 +59,11 @@ const Tools = () => {
         data-sal-delay="300"
         data-sal-easing="ease"
       >
-        I am always in the process of learning new tools for software
-        development. Check back in a few months, or even weeks, and you'll
-        likely see a different tech below. Here is what I am currently using.
+        Tools come and go, but what stays are the ways those tools helped one
+        think about and solve a problem. I am always learning new tools,
+        refreshing old ones, and drilling the core concepts of deductive
+        reasoning and problem solving. Here is a list of some of the tools I am
+        currently using.
       </Description>
       <ListGrid>
         <TechColumn>
