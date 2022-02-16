@@ -35,11 +35,23 @@ const Tools = () => {
 
   const { edges } = data.allMarkdownRemark;
 
-  const frontend = edges[0].node.frontmatter;
+  let frontend = {};
+  let backend = {};
+  let other = {};
 
-  const backend = edges[1].node.frontmatter;
-
-  const other = edges[2].node.frontmatter;
+  edges.forEach((item) => {
+    console.log(item.node.frontmatter.title);
+    switch (item.node.frontmatter.title) {
+      case "Frontend":
+        frontend = item.node.frontmatter;
+      case "Backend":
+        backend = item.node.frontmatter;
+      case "Other":
+        other = item.node.frontmatter;
+      default:
+        console.log("Tool list not found.");
+    }
+  });
 
   return (
     <ToolsContainer id="tools">
