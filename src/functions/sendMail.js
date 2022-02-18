@@ -15,7 +15,7 @@ exports.handler = async (event, context, callback) => {
 
   const msgMe = {
     to: "hamm.inquiries@gmail.com",
-    from: email,
+    from: "hamm.inquiries@gmail.com",
     subject: "Contact Form Submission",
     html: body,
   };
@@ -29,7 +29,7 @@ exports.handler = async (event, context, callback) => {
 
   try {
     await sgMail.send(msgMe);
-    await sgMail.send(msgClient);
+    // await sgMail.send(msgClient);
 
     return {
       statusCode: 200,
