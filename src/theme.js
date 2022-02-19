@@ -1,4 +1,6 @@
 export const theme = {
-  cranberry: "#952121",
+  colorAccent: "#952121",
+  colorPrimary: "black",
   fontTitle: "Palatino",
+  fontBody: "Trebuchet MS",
 };

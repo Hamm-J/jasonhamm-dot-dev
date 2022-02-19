@@ -2,9 +2,9 @@ import styled from "styled-components";
 
 export const Anchor = styled.a`
   text-decoration: none;
-  color: black;
+  color: ${(props) => props.theme.colorPrimary};
 
   &:hover {
-    color: #952121;
+    color: ${(props) => props.theme.colorAccent};
   }
 `;

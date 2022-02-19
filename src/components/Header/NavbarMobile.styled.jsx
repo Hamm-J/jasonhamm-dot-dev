@@ -9,11 +9,11 @@ export const NavLink = styled(AnchorLink)`
   font-size: 36px;
   max-height: 80px;
   margin-left: 15px;
-  color: white;
+  color: white; // AnchorLink does not work with ThemeProvider
   margin: 15px;
 
   &:hover {
-    color: #952121;
+    color: #952121; // AnchorLink does not work with ThemeProvider
   }
 `;
 
@@ -47,7 +47,7 @@ export const Hamburger = styled.button`
   cursor: pointer;
 
   &:hover {
-    color: #952121;
+    color: ${(props) => props.theme.colorAccent};
   }
 
   @media (min-width: 961px) {

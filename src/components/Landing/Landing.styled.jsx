@@ -12,7 +12,7 @@ export const ContentWrapper = styled.div``;
 
 export const Title = styled.h1`
   font-family: ${(props) => props.theme.fontTitle};
-  color: ${(props) => props.theme.cranberry};
+  color: ${(props) => props.theme.colorAccent};
 `;
 
 export const Description = styled.h1`

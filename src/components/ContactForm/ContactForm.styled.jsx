@@ -23,57 +23,57 @@ export const InfoWrapper = styled.div`
 `;
 
 export const Label = styled.label`
-  font-family: Trebuchet MS;
+  font-family: ${(props) => props.theme.fontBody};
 `;
 
 export const Questions = styled.h3`
-  font-family: Palatino;
+  font-family: ${(props) => props.theme.fontTitle};
 `;
 
 export const InputEmail = styled.input.attrs({ type: "email" })`
-  border: 1px solid black;
-  font-family: Trebuchet MS;
+  border: 1px solid ${(props) => props.theme.colorPrimary};
+  font-family: ${(props) => props.theme.fontTitle};
   border-radius: 3px;
 
   &:focus {
-    outline: 2px solid #952121;
+    outline: 2px solid ${(props) => props.theme.colorAccent};
   }
 `;
 
 export const InputText = styled.input.attrs({ type: "text" })`
-  border: 1px solid black;
+  border: 1px solid ${(props) => props.theme.colorPrimary};
   border-radius: 3px;
-  font-family: Trebuchet MS;
+  font-family: ${(props) => props.theme.fontBody};
 
   &:focus {
-    outline: 2px solid #952121;
+    outline: 2px solid ${(props) => props.theme.colorAccent};
   }
 `;
 
 export const TextArea = styled.textarea`
   height: 150px;
-  border: 1px solid black;
+  border: 1px solid ${(props) => props.theme.colorPrimary};
   resize: vertical;
   border-radius: 3px;
-  font-family: Trebuchet MS;
+  font-family: ${(props) => props.theme.fontBody};
 
   &:focus {
-    outline: 2px solid #952121;
+    outline: 2px solid ${(props) => props.theme.colorAccent};
   }
 `;
 
 export const SubmitButton = styled.button`
-  background-color: black;
-  border: 1px solid black;
+  background-color: ${(props) => props.theme.colorPrimary};
+  border: 1px solid ${(props) => props.theme.colorPrimary};
   color: white;
-  font-family: Trebuchet MS;
+  font-family: ${(props) => props.theme.fontBody};
   cursor: pointer;
   border-radius: 3px;
   margin-top: 5px;
   padding: 10px 0 10px 0;
 
   &:hover {
-    background-color: #952121;
+    background-color: ${(props) => props.theme.colorAccent};
   }
 
   &:active {
@@ -81,14 +81,14 @@ export const SubmitButton = styled.button`
   }
 
   &:focus {
-    outline: 3px solid #952121;
+    outline: 3px solid ${(props) => props.theme.colorAccent};
   }
 `;
 
 export const Confirmation = styled.h3`
   margin-top: 60px;
-  font-family: Palatino;
-  color: #952121;
+  font-family: ${(props) => props.theme.fontTitle};
+  color: ${(props) => props.theme.colorAccent};
   transform: ${(props) => (props.sent ? "translateY(0)" : "translateY(-15px)")};
   opacity: ${(props) => (props.sent ? "1" : "0")};
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;

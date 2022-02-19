@@ -8,14 +8,14 @@ export const NavContainer = styled.nav`
 `;
 
 export const NavLink = styled(AnchorLink)`
-  font-family: Palatino;
+  font-family: ${(props) => props.theme.fontTitle};
   text-decoration: none;
   font-size: 25px;
   max-height: 80px;
   margin-left: 15px;
-  color: black;
+  color: black; // AnchorLink is not working with ThemeProvider
 
   &:hover {
-    color: #952121;
+    color: #952121; // AnchorLink is not working with ThemeProvider
   }
 `;
