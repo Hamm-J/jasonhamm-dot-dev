@@ -9,18 +9,22 @@ import { IndexContainer } from "../components/Index.styled";
 
 import Layout from "../components/layout";
 import Seo from "../components/seo";
+import { ThemeProvider } from "styled-components";
+import { theme } from "../theme";
 
 const IndexPage = () => (
   <Layout>
     <Seo title="Home" />
-    <Landing></Landing>
-    {/* // TODO: temporarily disable projects until projects are ready */}
-    {/* <Projects></Projects> */}
-    <IndexContainer>
-      <About></About>
-      <Tools></Tools>
-      <ContactForm></ContactForm>
-    </IndexContainer>
+    <ThemeProvider theme={theme}>
+      <Landing></Landing>
+      {/* // TODO: temporarily disable projects until projects are ready */}
+      {/* <Projects></Projects> */}
+      <IndexContainer>
+        <About></About>
+        <Tools></Tools>
+        <ContactForm></ContactForm>
+      </IndexContainer>
+    </ThemeProvider>
   </Layout>
 );
 
