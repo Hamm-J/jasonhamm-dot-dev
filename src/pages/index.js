@@ -9,7 +9,7 @@ import { IndexContainer } from "../components/Index.styled";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
 import { ThemeProvider } from "styled-components";
-import { theme } from "../theme";
+import theme from "../theme";
 
 const IndexPage = () => (
   <ThemeProvider theme={theme}>
