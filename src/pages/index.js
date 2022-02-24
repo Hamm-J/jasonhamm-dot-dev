@@ -1,5 +1,4 @@
 import * as React from "react";
-import { Link } from "gatsby";
 import ContactForm from "../components/ContactForm/Index";
 import Landing from "../components/Landing/Index";
 import Projects from "../components/Projects/Index";
