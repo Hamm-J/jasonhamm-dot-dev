@@ -13,9 +13,9 @@ import { ThemeProvider } from "styled-components";
 import { theme } from "../theme";
 
 const IndexPage = () => (
-  <Layout>
-    <Seo title="Home" />
-    <ThemeProvider theme={theme}>
+  <ThemeProvider theme={theme}>
+    <Layout>
+      <Seo title="Home" />
       <Landing></Landing>
       {/* // TODO: temporarily disable projects until projects are ready */}
       {/* <Projects></Projects> */}
@@ -24,8 +24,8 @@ const IndexPage = () => (
         <Tools></Tools>
         <ContactForm></ContactForm>
       </IndexContainer>
-    </ThemeProvider>
-  </Layout>
+    </Layout>
+  </ThemeProvider>
 );
 
 export default IndexPage;
