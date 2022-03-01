@@ -11,14 +11,13 @@ export const Form = styled.form`
   display: flex;
   flex-direction: column;
   max-width: 500px;
-  min-width: 400px;
+  min-width: 350px;
 `;
 
 export const InfoWrapper = styled.div`
   display: flex;
   max-width: 400px;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: flex-start;
 `;
 
