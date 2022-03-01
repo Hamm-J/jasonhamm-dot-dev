@@ -41,7 +41,6 @@ const Tools = () => {
 
   // console.log(edges);
   edges.forEach((item) => {
-    console.log(item.node.frontmatter.title);
     if (item.node.frontmatter.title === "Frontend") {
       frontend = item.node.frontmatter;
     } else if (item.node.frontmatter.title === "Backend") {

@@ -4,11 +4,11 @@ export const ToolsContainer = styled.section``;
 
 export const Description = styled.p`
   /* margin-bottom: 50px; */
-  font-family: Trebuchet MS;
+  font-family: ${(props) => props.theme.fontBody};
 `;
 
 export const ListTitle = styled.h3`
-  font-family: Palatino;
+  font-family: ${(props) => props.theme.fontTitle};
   padding-top: 30px;
 `;
 
@@ -20,7 +20,7 @@ export const TechList = styled.ul`
 
 export const TechListItem = styled.li`
   display: flex;
-  font-family: Trebuchet MS;
+  font-family: ${(props) => props.theme.fontBody};
   align-items: center;
 `;
 
