@@ -5,11 +5,12 @@ import {
   NavLink,
   Overlay,
   LinkWrapper,
+  ThemeButton,
 } from "./NavbarMobile.styled";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 
-const NavbarMobile = () => {
+const NavbarMobile = ({ theme, toggleTheme }) => {
   const [open, setOpen] = useState(false);
 
   const toggleOpen = () => {
@@ -33,6 +34,9 @@ const NavbarMobile = () => {
           <NavLink to="/#contact" title="contact">
             Contact
           </NavLink>
+          <ThemeButton onClick={() => toggleTheme()}>
+            {theme === "Light" ? "Dark" : "Light"} Mode
+          </ThemeButton>
         </LinkWrapper>
       </Overlay>
       <Hamburger onClick={toggleOpen}>

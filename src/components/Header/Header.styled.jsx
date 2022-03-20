@@ -8,11 +8,10 @@ export const HeaderContainer = styled.header`
   max-width: 1150px;
   margin: 0 auto;
   z-index: 10;
-  background-color: white;
   height: 80px;
   width: 100%;
-  display: flex;
   padding-right: 15px;
+  display: flex;
 `;
 
 export const SideWrapper = styled.div`
@@ -20,6 +19,7 @@ export const SideWrapper = styled.div`
   display: flex;
   justify-content: ${(props) => props.side};
   align-items: center;
+  background-color: ${(props) => props.theme.backgroundColor};
 `;
 
 export const NavLink = styled(AnchorLink)`
@@ -27,11 +27,13 @@ export const NavLink = styled(AnchorLink)`
   text-decoration: none;
   max-height: 80px;
   margin-left: 15px;
-  color: black;
+  color: ${(props) => props.theme.colorPrimary};
   font-size: 36px;
+  outline: none;
 
-  &:hover {
-    color: #952121;
+  &:hover,
+  &:focus {
+    color: ${(props) => props.theme.colorAccent};
   }
 
   @media (max-width: 490px) {

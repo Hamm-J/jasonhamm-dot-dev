@@ -3,7 +3,7 @@ import { HeaderContainer, NavLink, SideWrapper } from "./Header.styled";
 import NavbarDesktop from "./NavbarDesktop";
 import NavbarMobile from "./NavbarMobile";
 
-const Header = ({ siteTitle }) => {
+const Header = ({ siteTitle, theme, toggleTheme }) => {
   return (
     <HeaderContainer
       data-sal="slide-down"
@@ -16,8 +16,8 @@ const Header = ({ siteTitle }) => {
         </NavLink>
       </SideWrapper>
       <SideWrapper side="flex-end">
-        <NavbarDesktop></NavbarDesktop>
-        <NavbarMobile></NavbarMobile>
+        <NavbarDesktop theme={theme} toggleTheme={toggleTheme}></NavbarDesktop>
+        <NavbarMobile theme={theme} toggleTheme={toggleTheme}></NavbarMobile>
       </SideWrapper>
     </HeaderContainer>
   );
