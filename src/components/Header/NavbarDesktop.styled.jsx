@@ -19,3 +19,5 @@ export const NavLink = styled(AnchorLink)`
     color: ${(props) => props.theme.colorAccent};
   }
 `;
+
+export const ThemeButton = styled.button``;

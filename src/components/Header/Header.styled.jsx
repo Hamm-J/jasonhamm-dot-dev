@@ -8,7 +8,7 @@ export const HeaderContainer = styled.header`
   max-width: 1150px;
   margin: 0 auto;
   z-index: 10;
-  background-color: white;
+  background-color: ${(props) => props.theme.backgroundColor};
   height: 80px;
   width: 100%;
   display: flex;
@@ -27,7 +27,7 @@ export const NavLink = styled(AnchorLink)`
   text-decoration: none;
   max-height: 80px;
   margin-left: 15px;
-  color: black;
+  color: ${(props) => props.theme.colorPrimary};
   font-size: 36px;
 
   &:hover {

@@ -1,7 +1,14 @@
 import React from "react";
-import { NavContainer, NavLink } from "./NavbarDesktop.styled";
+import { NavContainer, NavLink, ThemeButton } from "./NavbarDesktop.styled";
 
-const NavbarDesktop = () => {
+const NavbarDesktop = ({ theme, setTheme }) => {
+  const handleTheme = () => {
+    if (theme === "light") {
+      setTheme("dark");
+    } else {
+      setTheme("light");
+    }
+  };
   return (
     <NavContainer>
       {/* // TODO: temporarily disable projects section */}
@@ -17,6 +24,7 @@ const NavbarDesktop = () => {
       <NavLink to="/#contact" title="contact">
         Contact
       </NavLink>
+      <ThemeButton onClick={() => handleTheme()}>{theme}</ThemeButton>
     </NavContainer>
   );
 };

@@ -54,3 +54,5 @@ export const Hamburger = styled.button`
     display: none;
   }
 `;
+
+export const ThemeButton = styled.button``;

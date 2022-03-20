@@ -8,13 +8,19 @@
 import * as React from "react";
 import PropTypes from "prop-types";
 import { useStaticQuery, graphql } from "gatsby";
+import { useState } from "react";
 
 // import Header from "./header";
 import Header from "./Header/Index";
 import "./layout.css";
 import Footer from "./Footer/Index";
+import { ThemeProvider } from "styled-components";
+import { lightTheme, darkTheme } from "../theme";
+import GlobalStyle from "./layout.styled";
 
 const Layout = ({ children }) => {
+  const [theme, setTheme] = useState("light");
+
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -26,8 +32,13 @@ const Layout = ({ children }) => {
   `);
 
   return (
-    <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+    <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
+      <GlobalStyle />
+      <Header
+        siteTitle={data.site.siteMetadata?.title || `Title`}
+        theme={theme}
+        setTheme={setTheme}
+      />
       <div
         style={{
           margin: `0 auto`,
@@ -40,7 +51,7 @@ const Layout = ({ children }) => {
           © {new Date().getFullYear()}, Jason Hamm. All Rights Reserved.
         </Footer>
       </div>
-    </>
+    </ThemeProvider>
   );
 };
 
