@@ -73,7 +73,7 @@ const ContactForm = () => {
             data-sal-delay="500"
             data-sal-easing="ease"
           >
-            Got any questions? 📬
+            Any questions? 📬
           </Questions>
           <div
             data-sal="slide-right"

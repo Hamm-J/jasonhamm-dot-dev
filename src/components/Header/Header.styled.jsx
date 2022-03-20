@@ -8,13 +8,10 @@ export const HeaderContainer = styled.header`
   max-width: 1150px;
   margin: 0 auto;
   z-index: 10;
-  /* background-color: ${(props) => props.theme.backgroundColor}; */
   height: 80px;
   width: 100%;
   padding-right: 15px;
   display: flex;
-  justify-content: center;
-  align-items: center;
 `;
 
 export const SideWrapper = styled.div`

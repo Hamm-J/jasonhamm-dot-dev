@@ -4,19 +4,18 @@ export const ContactFormContainer = styled.section``;
 
 export const ContactGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 `;
 
 export const Form = styled.form`
   display: flex;
   flex-direction: column;
   max-width: 500px;
-  min-width: 350px;
 `;
 
 export const InfoWrapper = styled.div`
   display: flex;
-  max-width: 400px;
+  max-width: 500px;
   flex-direction: column;
   align-items: flex-start;
 `;
@@ -48,7 +47,6 @@ export const InputText = styled.input.attrs({ type: "text" })`
   color: ${(props) => props.theme.colorPrimary};
   border-radius: 3px;
   font-family: ${(props) => props.theme.fontBody};
-  width: 100%;
   box-sizing: border-box;
 
   &:focus {
