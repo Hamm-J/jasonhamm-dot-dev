@@ -19,7 +19,15 @@ import { lightTheme, darkTheme } from "../theme";
 import GlobalStyle from "./layout.styled";
 
 const Layout = ({ children }) => {
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState("Light");
+
+  const toggleTheme = () => {
+    if (theme === "Light") {
+      setTheme("Dark");
+    } else {
+      setTheme("Light");
+    }
+  };
 
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -32,12 +40,12 @@ const Layout = ({ children }) => {
   `);
 
   return (
-    <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
+    <ThemeProvider theme={theme === "Light" ? lightTheme : darkTheme}>
       <GlobalStyle />
       <Header
         siteTitle={data.site.siteMetadata?.title || `Title`}
         theme={theme}
-        setTheme={setTheme}
+        toggleTheme={toggleTheme}
       />
       <div
         style={{

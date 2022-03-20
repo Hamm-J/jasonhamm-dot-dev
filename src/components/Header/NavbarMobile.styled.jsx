@@ -4,16 +4,17 @@ import { AnchorLink } from "gatsby-plugin-anchor-links";
 export const NavContainer = styled.nav``;
 
 export const NavLink = styled(AnchorLink)`
-  font-family: Palatino;
+  font-family: ${(props) => props.theme.fontTitle};
   text-decoration: none;
   font-size: 36px;
   max-height: 80px;
-  margin-left: 15px;
-  color: white;
+  color: ${(props) => props.theme.colorSecondary};
   margin: 15px;
+  outline: none;
 
-  &:hover {
-    color: #952121;
+  &:hover,
+  &:focus {
+    color: ${(props) => props.theme.colorAccent};
   }
 `;
 
@@ -26,7 +27,7 @@ export const Overlay = styled.div`
   opacity: ${(props) => (props.open ? "0.85" : "0")};
   transition: opacity 0.25s ease-in 0 ease-out;
 
-  background-color: black;
+  background-color: ${(props) => props.theme.colorPrimary};
 `;
 
 export const LinkWrapper = styled.div`
@@ -45,9 +46,12 @@ export const Hamburger = styled.button`
   background: none;
   border: none;
   cursor: pointer;
+  outline: none;
+  color: ${(props) => props.theme.colorPrimary};
 
-  &:hover {
-    color: #952121;
+  &:hover,
+  &:focus {
+    color: ${(props) => props.theme.colorAccent};
   }
 
   @media (min-width: 961px) {
@@ -55,4 +59,26 @@ export const Hamburger = styled.button`
   }
 `;
 
-export const ThemeButton = styled.button``;
+export const ThemeButton = styled.button`
+  background-color: ${(props) => props.theme.backgroundColor};
+  color: ${(props) => props.theme.colorPrimary};
+  border: 2px solid ${(props) => props.theme.backgroundColor};
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 12px;
+  font-size: 30px;
+  margin: 15px;
+  font-family: ${(props) => props.theme.fontTitle};
+  box-sizing: border-box;
+  min-width: 184px;
+
+  &:hover {
+    background-color: ${(props) => props.theme.colorPrimary};
+    color: ${(props) => props.theme.colorSecondary};
+    border: 2px solid ${(props) => props.theme.colorSecondary};
+  }
+
+  &:focus {
+    outline: 2px solid ${(props) => props.theme.colorAccent};
+  }
+`;

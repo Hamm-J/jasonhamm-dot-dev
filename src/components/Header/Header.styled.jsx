@@ -8,11 +8,13 @@ export const HeaderContainer = styled.header`
   max-width: 1150px;
   margin: 0 auto;
   z-index: 10;
-  background-color: ${(props) => props.theme.backgroundColor};
+  /* background-color: ${(props) => props.theme.backgroundColor}; */
   height: 80px;
   width: 100%;
-  display: flex;
   padding-right: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const SideWrapper = styled.div`
@@ -20,6 +22,7 @@ export const SideWrapper = styled.div`
   display: flex;
   justify-content: ${(props) => props.side};
   align-items: center;
+  background-color: ${(props) => props.theme.backgroundColor};
 `;
 
 export const NavLink = styled(AnchorLink)`
@@ -29,9 +32,11 @@ export const NavLink = styled(AnchorLink)`
   margin-left: 15px;
   color: ${(props) => props.theme.colorPrimary};
   font-size: 36px;
+  outline: none;
 
-  &:hover {
-    color: #952121;
+  &:hover,
+  &:focus {
+    color: ${(props) => props.theme.colorAccent};
   }
 
   @media (max-width: 490px) {

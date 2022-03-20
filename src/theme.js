@@ -1,17 +1,23 @@
-export const lightTheme = {
+const generalTheme = {
   fontTitle: "Palatino",
   fontBody: "Trebuchet MS",
+  colorBlack: "black",
+  colorWhite: "white",
+  colorAccent: "#952121",
+};
+
+export const lightTheme = {
   colorPrimary: "black",
   colorSecondary: "white",
-  colorAccent: "#952121",
   backgroundColor: "white",
+
+  ...generalTheme,
 };
 
 export const darkTheme = {
-  fontTitle: "Palatino",
-  fontBody: "Trebuchet MS",
   colorPrimary: "white",
   colorSecondary: "black",
-  colorAccent: "#952121",
-  backgroundColor: "black",
+  backgroundColor: "#181a1b",
+
+  ...generalTheme,
 };

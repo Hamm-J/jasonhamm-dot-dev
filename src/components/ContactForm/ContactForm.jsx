@@ -58,20 +58,26 @@ const ContactForm = () => {
   };
 
   return (
-    <ContactFormContainer id="contact">
+    <ContactFormContainer
+      id="contact"
+      htmlFor="name"
+      data-sal="slide-up"
+      data-sal-delay="300"
+      data-sal-easing="ease"
+    >
       <SectionTitle>Contact</SectionTitle>
       <ContactGrid>
         <InfoWrapper htmlFor="name">
           <Questions
             data-sal="slide-right"
-            data-sal-delay="300"
+            data-sal-delay="500"
             data-sal-easing="ease"
           >
             Got any questions? 📬
           </Questions>
           <div
             data-sal="slide-right"
-            data-sal-delay="500"
+            data-sal-delay="700"
             data-sal-easing="ease"
           >
             <Comment htmlFor="name">
@@ -106,7 +112,7 @@ const ContactForm = () => {
           <Label
             htmlFor="name"
             data-sal="slide-up"
-            data-sal-delay="300"
+            data-sal-delay="500"
             data-sal-easing="ease"
           >
             Name
@@ -116,14 +122,14 @@ const ContactForm = () => {
             name="name"
             onChange={onChange}
             required
-            data-sal="slide-up"
-            data-sal-delay="400"
-            data-sal-easing="ease"
+            // data-sal="slide-up"
+            // data-sal-delay="400"
+            // data-sal-easing="ease"
           ></InputText>
           <Label
             htmlFor="email"
             data-sal="slide-up"
-            data-sal-delay="500"
+            data-sal-delay="700"
             data-sal-easing="ease"
           >
             Email
@@ -133,14 +139,14 @@ const ContactForm = () => {
             name="email"
             onChange={onChange}
             required
-            data-sal="slide-up"
-            data-sal-delay="600"
-            data-sal-easing="ease"
+            // data-sal="slide-up"
+            // data-sal-delay="600"
+            // data-sal-easing="ease"
           ></InputEmail>
           <Label
             htmlFor="message"
             data-sal="slide-up"
-            data-sal-delay="700"
+            data-sal-delay="900"
             data-sal-easing="ease"
           >
             Message
@@ -150,15 +156,15 @@ const ContactForm = () => {
             name="message"
             onChange={onChange}
             required
-            data-sal="slide-up"
-            data-sal-delay="800"
-            data-sal-easing="ease"
+            // data-sal="slide-up"
+            // data-sal-delay="800"
+            // data-sal-easing="ease"
           ></TextArea>
           <SubmitButton
             type="Submit"
-            data-sal="flip-up"
-            data-sal-delay="1000"
-            data-sal-easing="ease"
+            // data-sal="flip-up"
+            // data-sal-delay="1000"
+            // data-sal-easing="ease"
           >
             {loading ? "Sending..." : "Send"}
           </SubmitButton>

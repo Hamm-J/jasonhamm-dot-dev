@@ -30,9 +30,12 @@ export const Questions = styled.h3`
 `;
 
 export const InputEmail = styled.input.attrs({ type: "email" })`
-  border: 1px solid ${(props) => props.theme.colorPrimary};
+  border: 2px solid ${(props) => props.theme.colorPrimary};
   font-family: ${(props) => props.theme.fontBody};
   border-radius: 3px;
+  box-sizing: border-box;
+  background-color: ${(props) => props.theme.backgroundColor};
+  color: ${(props) => props.theme.colorPrimary};
 
   &:focus {
     outline: 2px solid ${(props) => props.theme.colorAccent};
@@ -40,9 +43,13 @@ export const InputEmail = styled.input.attrs({ type: "email" })`
 `;
 
 export const InputText = styled.input.attrs({ type: "text" })`
-  border: 1px solid ${(props) => props.theme.colorPrimary};
+  border: 2px solid ${(props) => props.theme.colorPrimary};
+  background-color: ${(props) => props.theme.backgroundColor};
+  color: ${(props) => props.theme.colorPrimary};
   border-radius: 3px;
   font-family: ${(props) => props.theme.fontBody};
+  width: 100%;
+  box-sizing: border-box;
 
   &:focus {
     outline: 2px solid ${(props) => props.theme.colorAccent};
@@ -51,10 +58,13 @@ export const InputText = styled.input.attrs({ type: "text" })`
 
 export const TextArea = styled.textarea`
   height: 150px;
-  border: 1px solid ${(props) => props.theme.colorPrimary};
+  border: 2px solid ${(props) => props.theme.colorPrimary};
+  background-color: ${(props) => props.theme.backgroundColor};
+  color: ${(props) => props.theme.colorPrimary};
   resize: vertical;
   border-radius: 3px;
   font-family: ${(props) => props.theme.fontBody};
+  box-sizing: border-box;
 
   &:focus {
     outline: 2px solid ${(props) => props.theme.colorAccent};
@@ -63,13 +73,14 @@ export const TextArea = styled.textarea`
 
 export const SubmitButton = styled.button`
   background-color: ${(props) => props.theme.colorPrimary};
-  border: 1px solid ${(props) => props.theme.colorPrimary};
-  color: white;
-  font-family: ${(props) => props.theme.fontbody};
+  border: 2px solid ${(props) => props.theme.colorPrimary};
+  color: ${(props) => props.theme.colorSecondary};
+  font-family: ${(props) => props.theme.fontBody};
   cursor: pointer;
   border-radius: 3px;
   margin-top: 5px;
   padding: 10px 0 10px 0;
+  font-size: 20px;
 
   &:hover {
     background-color: ${(props) => props.theme.colorAccent};

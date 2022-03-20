@@ -1,14 +1,7 @@
 import React from "react";
 import { NavContainer, NavLink, ThemeButton } from "./NavbarDesktop.styled";
 
-const NavbarDesktop = ({ theme, setTheme }) => {
-  const handleTheme = () => {
-    if (theme === "light") {
-      setTheme("dark");
-    } else {
-      setTheme("light");
-    }
-  };
+const NavbarDesktop = ({ theme, toggleTheme }) => {
   return (
     <NavContainer>
       {/* // TODO: temporarily disable projects section */}
@@ -24,7 +17,9 @@ const NavbarDesktop = ({ theme, setTheme }) => {
       <NavLink to="/#contact" title="contact">
         Contact
       </NavLink>
-      <ThemeButton onClick={() => handleTheme()}>{theme}</ThemeButton>
+      <ThemeButton onClick={() => toggleTheme()} type="button">
+        {theme === "Light" ? "Dark" : "Light"} Mode
+      </ThemeButton>
     </NavContainer>
   );
 };
