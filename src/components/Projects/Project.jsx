@@ -30,19 +30,31 @@ const Project = ({
     // data-sal-delay="300"
     // data-sal-easing="ease"
     >
-      <ImageWrapper>
+      <ImageWrapper
+        data-sal="slide-up"
+        data-sal-delay="500"
+        data-sal-easing="ease"
+      >
         <ProjectImage src={image}></ProjectImage>
         <InfoWrapper>
           <ProjectTitle>{title}</ProjectTitle>
           <ProjectDescription>{description}</ProjectDescription>
         </InfoWrapper>
       </ImageWrapper>
-      <TechList>
+      <TechList
+        data-sal="slide-left"
+        data-sal-delay="700"
+        data-sal-easing="ease"
+      >
         {techList.map((item, itemIdx) => (
           <TechListItem key={itemIdx}>{item}</TechListItem>
         ))}
       </TechList>
-      <LinksWrapper>
+      <LinksWrapper
+        data-sal="slide-up"
+        data-sal-delay="900"
+        data-sal-easing="ease"
+      >
         <Comment>
           <GeneralAnchor href={deploymentLink} target="_blank">
             Website <FontAwesomeIcon icon={faLink} />
