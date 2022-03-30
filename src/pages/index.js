@@ -11,7 +11,7 @@ import Seo from "../components/seo";
 
 const IndexPage = () => (
   <Layout>
-    <Seo title="Home" />
+    <Seo title="Jason Hamm" />
     <Landing></Landing>
     {/* // TODO: temporarily disable projects until projects are ready */}
     {/* <Projects></Projects> */}
