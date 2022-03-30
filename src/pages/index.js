@@ -13,8 +13,8 @@ const IndexPage = () => (
   <Layout>
     <Seo title="Jason Hamm" />
     <Landing></Landing>
-    <Projects></Projects>
     <IndexContainer>
+      <Projects></Projects>
       <About></About>
       <Tools></Tools>
       <ContactForm></ContactForm>

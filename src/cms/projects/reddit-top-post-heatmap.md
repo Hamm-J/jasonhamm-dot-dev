@@ -1,5 +1,5 @@
 ---
-title: Reddit Top Post Heatmap
+title: Reddit Top Posts Heatmap
 image: /assets/project-reddit-top-posts-heatmap.png
 tech-list:
   - React
