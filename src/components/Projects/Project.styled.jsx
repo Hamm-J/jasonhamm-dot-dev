@@ -8,6 +8,8 @@ export const ProjectTitle = styled.h3`
 
 export const ProjectDescription = styled.p`
   font-family: ${(props) => props.theme.fontBody};
+  inline-size: 830px;
+  overflow-wrap: break-word;
 `;
 
 export const ProjectImage = styled.img`
