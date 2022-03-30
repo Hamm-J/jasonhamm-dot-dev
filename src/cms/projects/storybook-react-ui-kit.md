@@ -5,6 +5,7 @@ tech-list:
   - React
   - StorybookJS
   - Styled Components
+  - Styled Icons
   - Netlify
 code-link: https://github.com/Hamm-J/Storybook-React-UI-Kit
 deployment-link: https://storybook-react-ui-kit.netlify.app
