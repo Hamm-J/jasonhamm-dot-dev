@@ -1,5 +1,5 @@
 import React from "react";
-import { ProjectsContainer } from "./Projects.styled";
+import { ProjectsContainer, ProjectsWrapper } from "./Projects.styled";
 import Project from "./Project";
 import SectionTitle from "../Common/SectionTitle/Index";
 import { useStaticQuery, graphql } from "gatsby";
@@ -31,17 +31,19 @@ const Projects = () => {
   return (
     <ProjectsContainer id="projects">
       <SectionTitle>Projects</SectionTitle>
-      {edges.map((edge, edgeIdx) => (
-        <Project
-          key={edgeIdx}
-          title={edge.node.frontmatter.title}
-          image={edge.node.frontmatter.image}
-          techList={edge.node.frontmatter.tech_list}
-          codeLink={edge.node.frontmatter.code_link}
-          deploymentLink={edge.node.frontmatter.deployment_link}
-          description={edge.node.rawMarkdownBody}
-        />
-      ))}
+      <ProjectsWrapper>
+        {edges.map((edge, edgeIdx) => (
+          <Project
+            key={edgeIdx}
+            title={edge.node.frontmatter.title}
+            image={edge.node.frontmatter.image}
+            techList={edge.node.frontmatter.tech_list}
+            codeLink={edge.node.frontmatter.code_link}
+            deploymentLink={edge.node.frontmatter.deployment_link}
+            description={edge.node.rawMarkdownBody}
+          />
+        ))}
+      </ProjectsWrapper>
     </ProjectsContainer>
   );
 };
