@@ -10,4 +10,9 @@ code-link: https://github.com/Hamm-J/Storybook-React-UI-Kit
 deployment-link: https://storybook-react-ui-kit.netlify.app
 ---
 
-testing body again
+Following a freely available Figma design file, I implemented 20 unique
+modern UI components, such as checkboxes, toggles, and dropdown menus, with
+Storybook and CSS.
+Each component is fit with dynamic and responsive states, and many have access
+to different colored themes and simulate data handling via Storybook's actions
+addon.
