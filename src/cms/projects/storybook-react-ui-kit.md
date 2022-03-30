@@ -1,6 +1,6 @@
 ---
 title: Storybook React UI Kit
-image: /assets/screen-shot-2022-02-06-at-2.02.20-pm.png
+image: /assets/project-storybook-react-ui-kit.png
 tech-list:
   - React
   - StorybookJS
