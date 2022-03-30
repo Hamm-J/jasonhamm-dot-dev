@@ -25,11 +25,7 @@ const Project = ({
   deploymentLink,
 }) => {
   return (
-    <ProjectContainer
-    // data-sal="slide-up"
-    // data-sal-delay="300"
-    // data-sal-easing="ease"
-    >
+    <ProjectContainer>
       <ImageWrapper
         data-sal="slide-up"
         data-sal-delay="500"
@@ -38,7 +34,9 @@ const Project = ({
         <ProjectImage src={image}></ProjectImage>
         <InfoWrapper>
           <ProjectTitle>{title}</ProjectTitle>
-          <ProjectDescription>{description}</ProjectDescription>
+          <ProjectDescription
+            dangerouslySetInnerHTML={{ __html: `<div>${description}</div>` }}
+          ></ProjectDescription>
         </InfoWrapper>
       </ImageWrapper>
       <TechList

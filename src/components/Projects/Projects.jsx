@@ -19,7 +19,7 @@ const Projects = () => {
               deployment_link
               code_link
             }
-            rawMarkdownBody
+            html
           }
         }
       }
@@ -32,13 +32,13 @@ const Projects = () => {
   edges.forEach((item) => {
     switch (item.node.frontmatter.title) {
       case "My Website":
-        projectsOrdered[2] = [item.node.frontmatter, item.node.rawMarkdownBody];
+        projectsOrdered[2] = [item.node.frontmatter, item.node.html];
         break;
       case "Storybook React UI Kit":
-        projectsOrdered[1] = [item.node.frontmatter, item.node.rawMarkdownBody];
+        projectsOrdered[1] = [item.node.frontmatter, item.node.html];
         break;
       case "Reddit Top Posts Heatmap":
-        projectsOrdered[0] = [item.node.frontmatter, item.node.rawMarkdownBody];
+        projectsOrdered[0] = [item.node.frontmatter, item.node.html];
         break;
       default:
       // pass
