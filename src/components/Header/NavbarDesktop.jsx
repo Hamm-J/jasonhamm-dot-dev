@@ -4,10 +4,9 @@ import { NavContainer, NavLink, ThemeButton } from "./NavbarDesktop.styled";
 const NavbarDesktop = ({ theme, toggleTheme }) => {
   return (
     <NavContainer>
-      {/* // TODO: temporarily disable projects section */}
-      {/* <NavLink to="/#projects" title="contact">
+      <NavLink to="/#projects" title="contact">
         Projects
-      </NavLink> */}
+      </NavLink>
       <NavLink to="/#about" title="contact">
         About
       </NavLink>

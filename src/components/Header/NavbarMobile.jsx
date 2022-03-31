@@ -21,10 +21,9 @@ const NavbarMobile = ({ theme, toggleTheme }) => {
     <NavContainer>
       <Overlay open={open}>
         <LinkWrapper open={open} onClick={toggleOpen}>
-          {/* // TODO: temporarily disable projects section */}
-          {/* <NavLink to="/#projects" title="contact">
+          <NavLink to="/#projects" title="contact">
             Projects
-          </NavLink> */}
+          </NavLink>
           <NavLink to="/#about" title="contact">
             About
           </NavLink>
