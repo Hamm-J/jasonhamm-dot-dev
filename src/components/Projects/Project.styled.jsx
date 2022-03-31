@@ -6,7 +6,7 @@ export const ProjectTitle = styled.h3`
   font-family: ${(props) => props.theme.fontTitle};
 `;
 
-export const ProjectDescription = styled.p`
+export const ProjectDescription = styled.div`
   font-family: ${(props) => props.theme.fontBody};
 `;
 
