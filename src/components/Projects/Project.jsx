@@ -31,7 +31,7 @@ const Project = ({
         data-sal-delay="500"
         data-sal-easing="ease"
       >
-        <ProjectImage src={image}></ProjectImage>
+        <ProjectImage src={image} alt={`Image of ${title}`} />
         <InfoWrapper>
           <ProjectTitle>{title}</ProjectTitle>
           <ProjectDescription
