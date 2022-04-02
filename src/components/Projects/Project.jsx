@@ -2,7 +2,9 @@ import React from "react";
 import {
   ProjectContainer,
   ProjectTitle,
+  DividerLine,
   ProjectImage,
+  ProjectOverlay,
   ImageWrapper,
   ProjectDescription,
   InfoWrapper,
@@ -32,8 +34,10 @@ const Project = ({
         data-sal-easing="ease"
       >
         <ProjectImage src={image} alt={`Image of ${title}`} />
+        <ProjectOverlay />
         <InfoWrapper>
           <ProjectTitle>{title}</ProjectTitle>
+          <DividerLine></DividerLine>
           <ProjectDescription
             dangerouslySetInnerHTML={{ __html: `<div>${description}</div>` }}
           ></ProjectDescription>
