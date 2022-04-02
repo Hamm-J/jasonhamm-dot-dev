@@ -4,18 +4,36 @@ export const ProjectContainer = styled.div``;
 
 export const ProjectTitle = styled.h3`
   font-family: ${(props) => props.theme.fontTitle};
+  margin: 0;
+`;
+
+export const DividerLine = styled.span`
+  display: block;
+  padding-top: 12px;
+  margin-bottom: 12px;
+  border-bottom: 3px solid white;
 `;
 
 export const ProjectDescription = styled.div`
   font-family: ${(props) => props.theme.fontBody};
+  font-size: 20px;
 `;
 
 export const ProjectImage = styled.img`
   transition: 0.5s ease;
-  opacity: 0.8;
-  background-color: black;
   margin: 0;
   width: 920px;
+`;
+
+export const ProjectOverlay = styled.div`
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.3;
+
+  transition: transform 0.5s ease;
 `;
 
 export const InfoWrapper = styled.div`
@@ -32,18 +50,15 @@ export const InfoWrapper = styled.div`
   transition: opacity 0.25s ease-in-out, transform 0.25s ease-in-out;
 
   @media (max-width: 576px) {
-    padding: 15px 25px;
+    padding: 25px 25px;
   }
 `;
 
 export const ImageWrapper = styled.div`
-  background-color: black;
   position: relative;
-
   overflow: hidden;
-  height: 400px;
-  max-width: 1000px;
 
+  height: 400px;
   border-radius: 3px;
 
   display: flex;
@@ -51,8 +66,11 @@ export const ImageWrapper = styled.div`
   align-items: flex-start;
 
   &:hover ${ProjectImage} {
-    opacity: 0.3;
     transform: scale(1.2);
+  }
+
+  &:hover ${ProjectOverlay} {
+    opacity: 0.8;
     transition: transform 0.5s ease;
   }
 
@@ -79,6 +97,7 @@ export const TechListItem = styled.li`
   background-color: ${(props) => props.theme.colorPrimary};
   color: ${(props) => props.theme.colorSecondary};
   font-family: ${(props) => props.theme.fontBody};
+  font-size: 20px;
   border-radius: 3px;
 `;
 

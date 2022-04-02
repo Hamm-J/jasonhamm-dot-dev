@@ -5,6 +5,7 @@ export const ToolsContainer = styled.section``;
 export const Description = styled.p`
   /* margin-bottom: 50px; */
   font-family: ${(props) => props.theme.fontBody};
+  font-size: 20px;
 `;
 
 export const ListTitle = styled.h3`
@@ -21,6 +22,7 @@ export const TechList = styled.ul`
 export const TechListItem = styled.li`
   display: flex;
   font-family: ${(props) => props.theme.fontBody};
+  font-size: 20px;
   align-items: center;
 `;
 

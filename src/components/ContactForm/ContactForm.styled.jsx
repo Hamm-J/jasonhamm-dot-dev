@@ -22,6 +22,7 @@ export const InfoWrapper = styled.div`
 
 export const Label = styled.label`
   font-family: ${(props) => props.theme.fontBody};
+  font-size: 20px;
 `;
 
 export const Questions = styled.h3`
@@ -35,6 +36,7 @@ export const InputEmail = styled.input.attrs({ type: "email" })`
   box-sizing: border-box;
   background-color: ${(props) => props.theme.backgroundColor};
   color: ${(props) => props.theme.colorPrimary};
+  margin-bottom: 5px;
 
   &:focus {
     outline: 2px solid ${(props) => props.theme.colorAccent};
@@ -48,6 +50,7 @@ export const InputText = styled.input.attrs({ type: "text" })`
   border-radius: 3px;
   font-family: ${(props) => props.theme.fontBody};
   box-sizing: border-box;
+  margin-bottom: 5px;
 
   &:focus {
     outline: 2px solid ${(props) => props.theme.colorAccent};
@@ -78,7 +81,7 @@ export const SubmitButton = styled.button`
   border-radius: 3px;
   margin-top: 5px;
   padding: 10px 0 10px 0;
-  font-size: 20px;
+  font-size: 24px;
 
   &:hover {
     background-color: ${(props) => props.theme.colorAccent};
@@ -96,6 +99,7 @@ export const SubmitButton = styled.button`
 export const Confirmation = styled.h3`
   margin-top: 60px;
   font-family: ${(props) => props.theme.fontTitle};
+  font-size: 20px;
   color: ${(props) => props.theme.colorAccent};
   transform: ${(props) => (props.sent ? "translateY(0)" : "translateY(-15px)")};
   opacity: ${(props) => (props.sent ? "1" : "0")};

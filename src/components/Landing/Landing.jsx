@@ -4,6 +4,7 @@ import {
   ContentWrapper,
   Title,
   Description,
+  DividerLine,
 } from "./Landing.styled";
 import { graphql, useStaticQuery } from "gatsby";
 
@@ -38,6 +39,11 @@ const Landing = () => {
         >
           {node.frontmatter.title}
         </Title>
+        <DividerLine
+          data-sal="zoom-in"
+          data-sal-delay="900"
+          data-sal-easing="ease"
+        ></DividerLine>
         <Description
           data-sal="slide-left"
           data-sal-delay="500"
