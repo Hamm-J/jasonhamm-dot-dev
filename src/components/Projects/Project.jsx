@@ -58,9 +58,13 @@ const Project = ({
         data-sal-easing="ease"
       >
         <Comment>
-          <GeneralAnchor href={deploymentLink} target="_blank">
-            Website <FontAwesomeIcon icon={faLink} />
-          </GeneralAnchor>
+          {title === "My Website" ? (
+            <div>You're looking at it 😉</div>
+          ) : (
+            <GeneralAnchor href={deploymentLink} target="_blank">
+              Demo <FontAwesomeIcon icon={faLink} />
+            </GeneralAnchor>
+          )}
         </Comment>
         <Comment>
           <GeneralAnchor href={codeLink} target="_blank">
