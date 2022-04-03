@@ -91,7 +91,7 @@ const ContactForm = () => {
               </GeneralAnchor>{" "}
               or{" "}
               <GeneralAnchor
-                href="https://www.linkedin.com/in/jason-hamm-822041232/"
+                href="https://www.linkedin.com/in/jason-hamm/"
                 target="_blank"
               >
                 Linked
