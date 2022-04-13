@@ -23,7 +23,7 @@ export const SideWrapper = styled.div`
 `;
 
 export const NavLink = styled(AnchorLink)`
-  font-family: Palatino;
+  font-family: ${(props) => props.theme.fontTitle};
   text-decoration: none;
   max-height: 80px;
   margin-left: 15px;

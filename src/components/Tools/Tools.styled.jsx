@@ -28,7 +28,7 @@ export const TechListItem = styled.li`
 
 export const TechListItemImage = styled.img`
   padding-left: 10px;
-  width: 40px;
+  height: 30px;
 `;
 
 export const TechColumn = styled.div``;

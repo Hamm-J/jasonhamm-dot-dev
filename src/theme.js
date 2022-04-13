@@ -1,5 +1,5 @@
 const generalTheme = {
-  fontTitle: "Palatino",
+  fontTitle: "Tahoma",
   fontBody: "Trebuchet MS",
   colorBlack: "black",
   colorWhite: "white",

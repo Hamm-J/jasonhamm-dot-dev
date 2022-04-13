@@ -59,9 +59,9 @@ const Tools = () => {
         data-sal-easing="ease"
       >
         Tools come and go, but what stays are the ways those tools helped one
-        think about and solve a problem. I am always learning new tools,
-        refreshing old ones, and drilling the core concepts of deductive
-        reasoning and coding best practices. Here is a list of some of the tools
+        think about and solve a problem. I am always learning new tools and
+        refreshing old ones, this is one of the most exciting and fun parts of
+        programming. Here is a list of some of the current tools I use:
       </Description>
       <ListGrid>
         <TechColumn>
