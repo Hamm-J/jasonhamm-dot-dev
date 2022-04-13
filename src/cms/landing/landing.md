@@ -2,4 +2,4 @@
 title: "Hi, I'm Jason 🐷"
 ---
 
-I'm a software developer, cooking hobbyist, and philosophy nerd
+I'm a cognitive science researcher turned software developer

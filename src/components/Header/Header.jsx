@@ -11,7 +11,7 @@ const Header = ({ siteTitle, theme, toggleTheme }) => {
       data-sal-easing="ease"
     >
       <SideWrapper side="flex-start">
-        <NavLink to="/#landing" title="contact">
+        <NavLink to="/#landing" title="landing">
           {siteTitle}
         </NavLink>
       </SideWrapper>

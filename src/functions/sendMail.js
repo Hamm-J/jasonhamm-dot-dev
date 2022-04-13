@@ -24,7 +24,7 @@ exports.handler = async (event, context, callback) => {
     to: email,
     from: "hamm.inquiries@gmail.com",
     subject: "Thank you for reaching out!",
-    html: "Thank you for reaching out to me! I'll get back to you ASAP! <br /> <br /> Best, <br />Jason",
+    html: "Thank you for reaching out! I'll get back to you ASAP! <br /> <br /> Best, <br />Jason",
   };
 
   try {

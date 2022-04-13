@@ -53,7 +53,7 @@ const About = () => {
         in JavaScript, HTML, and CSS, and then analyzing the data collected with
         those programs in R and Python. I've always had an interest in
         programming but it wasn't until I worked as a lab manager and research
-        assistant in a cognitive neuroscience laboratory at my alma mater of
+        assistant in a cognitive neuroscience laboratory at my alma mater
         Cornell University, that I finally sunk my teeth into coding. Now, I
         have combined my love for learning and solving problems with my passion
         for programming and am eager to take on new problems in software

@@ -7,6 +7,8 @@ tools:
     tool-image: /assets/unix.png
   - tool-name: TypeScript
     tool-image: /assets/typescript.png
+  - tool-name: R
+    tool-image: /assets/R.png
   - tool-name: Vim
     tool-image: /assets/vim.png
 ---
