@@ -61,6 +61,19 @@ const ContactForm = () => {
     }
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    let myForm = document.getElementById("contact-form");
+    let formData = new FormData(myForm);
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString(),
+    })
+      .then(() => setSent(true))
+      .catch((error) => console.log(error));
+  };
+
   return (
     <ContactFormContainer
       id="contact"
@@ -109,10 +122,12 @@ const ContactForm = () => {
         </InfoWrapper>
         <Form
           name="contact-form"
+          id="contact-form"
           // action="/success/
           method="POST"
           // onSubmit={submitForm}
-          onSubmit={submitNetlifyFunction}
+          // onSubmit={submitNetlifyFunction}
+          onSubmit={(e) => handleSubmit(e)}
           data-netlify="true"
           netlify-honeypot="bot-field"
         >
