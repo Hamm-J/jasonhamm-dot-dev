@@ -183,6 +183,7 @@ const ContactForm = () => {
             // data-sal-delay="800"
             // data-sal-easing="ease"
           ></TextArea>
+          <div data-netlify-recaptcha="true"></div>
           <SubmitButton
             type="Submit"
             // data-sal="flip-up"
