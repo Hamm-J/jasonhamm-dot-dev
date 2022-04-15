@@ -109,13 +109,14 @@ const ContactForm = () => {
         </InfoWrapper>
         <Form
           name="contact-form"
-          action="/success/"
+          // action="/success/
           method="POST"
           // onSubmit={submitForm}
           onSubmit={submitNetlifyFunction}
           data-netlify="true"
           netlify-honeypot="bot-field"
         >
+          <input type="hidden" name="form-name" value="contact-form"></input>
           <Label
             htmlFor="name"
             data-sal="slide-up"
