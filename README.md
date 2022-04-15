@@ -27,6 +27,8 @@ Since GatsbyJS serves a static HTML document, the functionality can be quite lim
 However, I was able to add functionality back to my contact form using [Netlify Functions](https://docs.netlify.com/functions/overview/), which is powered by [AWS Lambda](https://aws.amazon.com/lambda/), to create an HTTP request to execute my contact form function. For the actual email handling, I used [SendGrid](https://sendgrid.com/) and its [NodeJS library](https://docs.sendgrid.com/for-developers/sending-email/quickstart-nodejs) to effectively send emails, while reducing the
 likelihood of spam filters intercepting the email to both myself and the sender.
 
+**UPDATE 2022/4/15: I reached the email limit granted in the free tier of SendGrid.** In the meantime, while SendGrid approves my account for a higher tier with more emails, I have set up email handling with [Netlify Forms](https://docs.netlify.com/forms/setup/). With Netlify Forms, I am able to receive messages from users, however, I am not able to send confirmation emails to users. Once SendGrid approves my account for a higher email limit, I will return back to using SendGrid and Netlify Functions.
+
 ### Future Features
 
 - Redo scroll animations with CSS: I plan to redo all of the scroll animations
