@@ -33,6 +33,10 @@ const ContactForm = () => {
     setFormState({ ...formState, [e.target.name]: e.target.value });
   };
 
+  const submitNetlifyFunction = () => {
+    setSent(true);
+  };
+
   const submitForm = async (e) => {
     e.preventDefault();
 
@@ -107,7 +111,10 @@ const ContactForm = () => {
           name="contact-form"
           action="/success/"
           method="POST"
-          onSubmit={submitForm}
+          // onSubmit={submitForm}
+          onSubmit={submitNetlifyFunction}
+          data-netlify="true"
+          netlify-honeypot="bot-field"
         >
           <Label
             htmlFor="name"
