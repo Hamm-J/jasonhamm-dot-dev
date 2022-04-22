@@ -33,7 +33,7 @@ const Project = ({
         data-sal-delay="500"
         data-sal-easing="ease"
       >
-        <ProjectImage src={image} alt={`Image of ${title}`} />
+        <ProjectImage loading="lazy" src={image} alt={`Image of ${title}`} />
         <ProjectOverlay />
         <InfoWrapper>
           <ProjectTitle>{title}</ProjectTitle>
