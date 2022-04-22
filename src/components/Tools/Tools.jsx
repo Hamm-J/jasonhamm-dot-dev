@@ -80,7 +80,7 @@ const Tools = () => {
             {frontend.tools.map((item, itemIdx) => (
               <TechListItem key={itemIdx}>
                 {item.tool_name}
-                <TechListItemImage src={item.tool_image} />
+                <TechListItemImage loading="lazy" src={item.tool_image} />
               </TechListItem>
             ))}
           </TechList>
@@ -100,7 +100,8 @@ const Tools = () => {
           >
             {backend.tools.map((item, itemIdx) => (
               <TechListItem key={itemIdx}>
-                {item.tool_name} <TechListItemImage src={item.tool_image} />
+                {item.tool_name}{" "}
+                <TechListItemImage loading="lazy" src={item.tool_image} />
               </TechListItem>
             ))}
           </TechList>
@@ -120,7 +121,8 @@ const Tools = () => {
           >
             {other.tools.map((item, itemIdx) => (
               <TechListItem key={itemIdx}>
-                {item.tool_name} <TechListItemImage src={item.tool_image} />
+                {item.tool_name}{" "}
+                <TechListItemImage loading="lazy" src={item.tool_image} />
               </TechListItem>
             ))}
           </TechList>
