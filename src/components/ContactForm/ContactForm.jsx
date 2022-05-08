@@ -61,7 +61,7 @@ const ContactForm = () => {
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleNetlifySubmit = (e) => {
     e.preventDefault();
     let myForm = document.getElementById("contact-form");
     let formData = new FormData(myForm);
@@ -126,7 +126,7 @@ const ContactForm = () => {
           method="POST"
           // onSubmit={submitForm}
           // onSubmit={submitNetlifyFunction}
-          onSubmit={(e) => handleSubmit(e)}
+          onSubmit={(e) => handleNetlifySubmit(e)}
           data-netlify="true"
           netlify-honeypot="bot-field"
         >
