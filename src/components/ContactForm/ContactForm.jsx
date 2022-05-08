@@ -123,7 +123,6 @@ const ContactForm = () => {
         <Form
           name="contact-form"
           id="contact-form"
-          // action="/success/
           method="POST"
           // onSubmit={submitForm}
           // onSubmit={submitNetlifyFunction}
