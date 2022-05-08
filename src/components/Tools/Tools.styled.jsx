@@ -27,13 +27,18 @@ export const TechListItem = styled.li`
 `;
 
 export const TechListItemImage = styled.img`
-  padding-left: 10px;
+  margin-left: 10px;
   height: 30px;
+  width: 30px;
+  object-fit: contain;
 `;
 
-export const TechColumn = styled.div``;
+export const TechColumn = styled.div`
+  width: 220px;
+`;
 
 export const ListGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  justify-items: center;
 `;
