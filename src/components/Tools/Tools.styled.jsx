@@ -31,9 +31,12 @@ export const TechListItemImage = styled.img`
   height: 30px;
 `;
 
-export const TechColumn = styled.div``;
+export const TechColumn = styled.div`
+  width: 220px;
+`;
 
 export const ListGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  justify-items: center;
 `;
