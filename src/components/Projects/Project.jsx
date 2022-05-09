@@ -48,6 +48,7 @@ const Project = ({
         data-sal="slide-left"
         data-sal-delay="700"
         data-sal-easing="ease"
+        tabIndex={0}
       >
         {techList.map((item, itemIdx) => (
           <TechListItem key={itemIdx}>{item}</TechListItem>

@@ -65,6 +65,10 @@ export const ImageWrapper = styled.div`
   justify-content: center;
   align-items: flex-start;
 
+  &:focus {
+    outline: 2px solid ${(props) => props.theme.colorAccent};
+  }
+
   &:hover ${ProjectImage}, &:focus ${ProjectImage} {
     transform: scale(1.2);
   }
@@ -80,17 +84,6 @@ export const ImageWrapper = styled.div`
     overflow-y: scroll;
   }
 `;
-
-export const TechList = styled.ul`
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 20px;
-  margin-bottom: 20px;
-`;
-
 export const TechListItem = styled.li`
   margin: 5px 5px 5px 0;
   padding: 5px 10px 5px 10px;
@@ -99,6 +92,20 @@ export const TechListItem = styled.li`
   font-family: ${(props) => props.theme.fontBody};
   font-size: 20px;
   border-radius: 3px;
+`;
+export const TechList = styled.ul`
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  outline: none;
+
+  &:focus ${TechListItem} {
+    background-color: ${(props) => props.theme.colorAccent};
+  }
 `;
 
 export const LinksWrapper = styled.div`
