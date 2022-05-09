@@ -69,6 +69,7 @@ const Tools = () => {
             data-sal="slide-up"
             data-sal-delay="400"
             data-sal-easing="ease"
+            tabIndex={0}
           >
             {frontend.title}
           </ListTitle>
@@ -94,6 +95,7 @@ const Tools = () => {
             data-sal="slide-up"
             data-sal-delay="600"
             data-sal-easing="ease"
+            tabIndex={0}
           >
             {backend.title}
           </ListTitle>
@@ -119,6 +121,7 @@ const Tools = () => {
             data-sal="slide-up"
             data-sal-delay="800"
             data-sal-easing="ease"
+            tabIndex={0}
           >
             {other.title}
           </ListTitle>

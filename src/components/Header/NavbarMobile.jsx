@@ -19,6 +19,9 @@ const NavbarMobile = ({ theme, toggleTheme }) => {
 
   return (
     <NavContainer>
+      <Hamburger onClick={toggleOpen} aria-label="Navigation Menu">
+        <FontAwesomeIcon icon={faBars} />
+      </Hamburger>
       <Overlay open={open}>
         <LinkWrapper open={open} onClick={toggleOpen}>
           <NavLink to="/#projects" title="contact">
@@ -38,9 +41,6 @@ const NavbarMobile = ({ theme, toggleTheme }) => {
           </ThemeButton>
         </LinkWrapper>
       </Overlay>
-      <Hamburger onClick={toggleOpen}>
-        <FontAwesomeIcon icon={faBars} />
-      </Hamburger>
     </NavContainer>
   );
 };

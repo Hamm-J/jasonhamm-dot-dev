@@ -12,7 +12,7 @@ export const Date = styled.h6``;
 
 export const Description = styled.p`
   font-family: ${(props) => props.theme.fontBody};
-  font-size: 20px; ;
+  font-size: 20px;
 `;
 
 export const Accent = styled.span`

@@ -11,6 +11,11 @@ export const Description = styled.p`
 export const ListTitle = styled.h3`
   font-family: ${(props) => props.theme.fontTitle};
   padding-top: 30px;
+  outline: none;
+
+  &:focus {
+    color: ${(props) => props.theme.colorAccent};
+  }
 `;
 
 export const TechList = styled.ul`
@@ -33,7 +38,7 @@ export const TechListItemImage = styled.img`
   object-fit: contain;
 `;
 
-export const TechColumn = styled.div`
+export const TechColumn = styled.article`
   width: 220px;
 `;
 

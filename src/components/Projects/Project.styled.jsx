@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ProjectContainer = styled.div``;
+export const ProjectContainer = styled.article``;
 
 export const ProjectTitle = styled.h3`
   font-family: ${(props) => props.theme.fontTitle};
@@ -14,7 +14,7 @@ export const DividerLine = styled.span`
   border-bottom: 3px solid white;
 `;
 
-export const ProjectDescription = styled.div`
+export const ProjectDescription = styled.article`
   font-family: ${(props) => props.theme.fontBody};
   font-size: 20px;
 `;
@@ -65,32 +65,25 @@ export const ImageWrapper = styled.div`
   justify-content: center;
   align-items: flex-start;
 
-  &:hover ${ProjectImage} {
+  &:focus {
+    outline: 2px solid ${(props) => props.theme.colorAccent};
+  }
+
+  &:hover ${ProjectImage}, &:focus ${ProjectImage} {
     transform: scale(1.2);
   }
 
-  &:hover ${ProjectOverlay} {
+  &:hover ${ProjectOverlay}, &:focus ${ProjectOverlay} {
     opacity: 0.8;
     transition: transform 0.5s ease;
   }
 
-  &:hover ${InfoWrapper} {
+  &:hover ${InfoWrapper}, &:focus ${InfoWrapper} {
     opacity: 1;
     transform: translateY(0);
     overflow-y: scroll;
   }
 `;
-
-export const TechList = styled.ul`
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 20px;
-  margin-bottom: 20px;
-`;
-
 export const TechListItem = styled.li`
   margin: 5px 5px 5px 0;
   padding: 5px 10px 5px 10px;
@@ -99,6 +92,20 @@ export const TechListItem = styled.li`
   font-family: ${(props) => props.theme.fontBody};
   font-size: 20px;
   border-radius: 3px;
+`;
+export const TechList = styled.ul`
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  outline: none;
+
+  &:focus ${TechListItem} {
+    background-color: ${(props) => props.theme.colorAccent};
+  }
 `;
 
 export const LinksWrapper = styled.div`

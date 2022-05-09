@@ -25,6 +25,7 @@ export const Overlay = styled.div`
   width: ${(props) => (props.open ? "100%" : "0")};
   height: ${(props) => (props.open ? "100%" : "0")};
   opacity: ${(props) => (props.open ? "0.85" : "0")};
+  visibility: ${(props) => (props.open ? "visible" : "hidden")};
   transition: opacity 0.25s ease-in 0 ease-out;
 
   background-color: ${(props) => props.theme.colorPrimary};

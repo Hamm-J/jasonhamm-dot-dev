@@ -32,6 +32,7 @@ const Project = ({
         data-sal="slide-up"
         data-sal-delay="500"
         data-sal-easing="ease"
+        tabIndex={0}
       >
         <ProjectImage loading="lazy" src={image} alt={`Image of ${title}`} />
         <ProjectOverlay />
@@ -47,6 +48,7 @@ const Project = ({
         data-sal="slide-left"
         data-sal-delay="700"
         data-sal-easing="ease"
+        tabIndex={0}
       >
         {techList.map((item, itemIdx) => (
           <TechListItem key={itemIdx}>{item}</TechListItem>
