@@ -59,6 +59,7 @@ export const InputText = styled.input.attrs({ type: "text" })`
 
 export const TextArea = styled.textarea`
   height: 150px;
+  min-height: 32px;
   border: 2px solid ${(props) => props.theme.colorPrimary};
   background-color: ${(props) => props.theme.backgroundColor};
   color: ${(props) => props.theme.colorPrimary};
