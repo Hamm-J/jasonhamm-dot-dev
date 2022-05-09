@@ -65,19 +65,16 @@ export const ImageWrapper = styled.div`
   justify-content: center;
   align-items: flex-start;
 
-  &:hover,
-  &:focus ${ProjectImage} {
+  &:hover ${ProjectImage}, &:focus ${ProjectImage} {
     transform: scale(1.2);
   }
 
-  &:hover,
-  &:focus ${ProjectOverlay} {
+  &:hover ${ProjectOverlay}, &:focus ${ProjectOverlay} {
     opacity: 0.8;
     transition: transform 0.5s ease;
   }
 
-  &:hover,
-  &:focus ${InfoWrapper} {
+  &:hover ${InfoWrapper}, &:focus ${InfoWrapper} {
     opacity: 1;
     transform: translateY(0);
     overflow-y: scroll;
