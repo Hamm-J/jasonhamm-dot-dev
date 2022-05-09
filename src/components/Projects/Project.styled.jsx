@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ProjectContainer = styled.div``;
+export const ProjectContainer = styled.article``;
 
 export const ProjectTitle = styled.h3`
   font-family: ${(props) => props.theme.fontTitle};
@@ -14,7 +14,7 @@ export const DividerLine = styled.span`
   border-bottom: 3px solid white;
 `;
 
-export const ProjectDescription = styled.div`
+export const ProjectDescription = styled.article`
   font-family: ${(props) => props.theme.fontBody};
   font-size: 20px;
 `;
@@ -65,16 +65,19 @@ export const ImageWrapper = styled.div`
   justify-content: center;
   align-items: flex-start;
 
-  &:hover ${ProjectImage} {
+  &:hover,
+  &:focus ${ProjectImage} {
     transform: scale(1.2);
   }
 
-  &:hover ${ProjectOverlay} {
+  &:hover,
+  &:focus ${ProjectOverlay} {
     opacity: 0.8;
     transition: transform 0.5s ease;
   }
 
-  &:hover ${InfoWrapper} {
+  &:hover,
+  &:focus ${InfoWrapper} {
     opacity: 1;
     transform: translateY(0);
     overflow-y: scroll;
