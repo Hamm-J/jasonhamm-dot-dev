@@ -19,7 +19,7 @@ const NavbarMobile = ({ theme, toggleTheme }) => {
 
   return (
     <NavContainer>
-      <Hamburger onClick={toggleOpen}>
+      <Hamburger onClick={toggleOpen} aria-label="Navigation Menu">
         <FontAwesomeIcon icon={faBars} />
       </Hamburger>
       <Overlay open={open}>
