@@ -32,7 +32,6 @@ const About = () => {
         data-sal="slide-up"
         data-sal-delay="500"
         data-sal-easing="ease"
-        tabIndex={0}
       >
         <Accent>I love learning and solving problems.</Accent> Nothing excites
         me more than solving a new bug or error. Deducing what works and what
@@ -46,7 +45,6 @@ const About = () => {
         data-sal="slide-up"
         data-sal-delay="700"
         data-sal-easing="ease"
-        tabIndex={0}
       >
         <Accent>
           I discovered my passion for programming while developing programs for
