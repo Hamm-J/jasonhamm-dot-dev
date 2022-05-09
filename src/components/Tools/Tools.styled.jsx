@@ -38,7 +38,7 @@ export const TechListItemImage = styled.img`
   object-fit: contain;
 `;
 
-export const TechColumn = styled.div`
+export const TechColumn = styled.article`
   width: 220px;
 `;
 
